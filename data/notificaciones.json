@@ -1,0 +1,62 @@
+[
+  {
+    "id": "not-875aefe2",
+    "tipo": "confirmacion",
+    "turno_id": "tur-edd1e2e1",
+    "destinatario": "admin@patitassanas.com",
+    "mensaje": "Su turno con Dr. Martín López el 2026-05-24 a las 11:30 fue confirmado.",
+    "enviado_en": "2026-05-21T14:43:43.822586",
+    "programado_para": null,
+    "estado": "simulado"
+  },
+  {
+    "id": "not-c8819124",
+    "tipo": "recordatorio",
+    "turno_id": "tur-edd1e2e1",
+    "destinatario": "admin@patitassanas.com",
+    "mensaje": "Recordatorio: mañana tiene turno a las 11:30 con Dr. Martín López.",
+    "enviado_en": "2026-05-21T14:43:43.828611",
+    "programado_para": "2026-05-23T11:30:00",
+    "estado": "simulado"
+  },
+  {
+    "id": "not-a4a61271",
+    "tipo": "confirmacion",
+    "turno_id": "tur-f9a9b5a8",
+    "destinatario": "admin@patitassanas.com",
+    "mensaje": "Su turno con Dra. Sofía Ramos el 2026-05-23 a las 09:30 fue confirmado.",
+    "enviado_en": "2026-05-21T14:45:05.753914",
+    "programado_para": null,
+    "estado": "simulado"
+  },
+  {
+    "id": "not-3ef62670",
+    "tipo": "recordatorio",
+    "turno_id": "tur-f9a9b5a8",
+    "destinatario": "admin@patitassanas.com",
+    "mensaje": "Recordatorio: mañana tiene turno a las 09:30 con Dra. Sofía Ramos.",
+    "enviado_en": "2026-05-21T14:45:05.754971",
+    "programado_para": "2026-05-22T09:30:00",
+    "estado": "simulado"
+  },
+  {
+    "id": "not-8e14e545",
+    "tipo": "confirmacion",
+    "turno_id": "tur-cdba3e73",
+    "destinatario": "admin@patitassanas.com",
+    "mensaje": "Su turno con Dr. Martín López el 2026-05-26 a las 09:30 fue confirmado.",
+    "enviado_en": "2026-05-21T15:43:34.572933",
+    "programado_para": null,
+    "estado": "simulado"
+  },
+  {
+    "id": "not-e9629d42",
+    "tipo": "recordatorio",
+    "turno_id": "tur-cdba3e73",
+    "destinatario": "admin@patitassanas.com",
+    "mensaje": "Recordatorio: mañana tiene turno a las 09:30 con Dr. Martín López.",
+    "enviado_en": "2026-05-21T15:43:34.581628",
+    "programado_para": "2026-05-25T09:30:00",
+    "estado": "simulado"
+  }
+]

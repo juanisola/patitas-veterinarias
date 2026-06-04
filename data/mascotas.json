@@ -1,0 +1,63 @@
+[
+  {
+    "id": "mas-001",
+    "nombre": "Firulais",
+    "especie": "Perro",
+    "raza": "Labrador",
+    "edad_anios": 3,
+    "peso_kg": 28.5,
+    "alergias": [
+      "Penicilina"
+    ],
+    "propietario_id": "usr-004",
+    "historial": [
+      {
+        "fecha": "2024-11-10",
+        "tipo": "consulta",
+        "diagnostico": "Otitis leve",
+        "tratamiento": "Gotas óticas 7 días",
+        "veterinario_id": "usr-001",
+        "notas_internas": "Propietario poco colaborador en la limpieza de orejas."
+      }
+    ],
+    "vacunas": [
+      {
+        "nombre": "Antirrábica",
+        "fecha_aplicacion": "2024-03-15",
+        "proxima_aplicacion": "2025-03-15"
+      },
+      {
+        "nombre": "Séxtuple",
+        "fecha_aplicacion": "2024-03-15",
+        "proxima_aplicacion": "2025-03-15"
+      }
+    ]
+  },
+  {
+    "id": "mas-002",
+    "nombre": "Michi",
+    "especie": "Gato",
+    "raza": "Siamés",
+    "edad_anios": 5,
+    "peso_kg": 4.2,
+    "alergias": [],
+    "propietario_id": "usr-005",
+    "historial": [
+      {
+        "fecha": "2025-01-20",
+        "tipo": "vacunacion",
+        "diagnostico": "Control anual",
+        "tratamiento": "Triple felina aplicada",
+        "veterinario_id": "usr-002",
+        "notas_internas": "Gato muy estresado. Usar guantes en próxima visita."
+      }
+    ],
+    "vacunas": [
+      {
+        "nombre": "Triple Felina",
+        "fecha_aplicacion": "2025-01-20",
+        "proxima_aplicacion": "2026-01-20"
+      }
+    ]
+  }
+]

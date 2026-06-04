@@ -1,0 +1,297 @@
+2026-05-21 14:13:03,587 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-21 14:13:03,695 [INFO] watchfiles.main — 4 changes detected
+2026-05-21 14:14:40,672 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-21 14:20:11,417 [INFO] watchfiles.main — 1 change detected
+2026-05-21 14:20:16,404 [INFO] watchfiles.main — 1 change detected
+2026-05-21 14:28:56,484 [INFO] watchfiles.main — 1 change detected
+2026-05-21 14:29:02,160 [INFO] watchfiles.main — 1 change detected
+2026-05-21 14:29:08,552 [INFO] watchfiles.main — 1 change detected
+2026-05-21 14:30:30,418 [INFO] watchfiles.main — 1 change detected
+2026-05-21 14:30:39,643 [INFO] watchfiles.main — 1 change detected
+2026-05-21 14:36:55,707 [INFO] watchfiles.main — 1 change detected
+2026-05-21 14:36:56,286 [INFO] watchfiles.main — 1 change detected
+2026-05-21 14:36:59,248 [INFO] watchfiles.main — 3 changes detected
+2026-05-21 14:37:04,270 [INFO] watchfiles.main — 1 change detected
+2026-05-21 14:37:08,155 [INFO] watchfiles.main — 2 changes detected
+2026-05-21 14:37:08,491 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-21 14:37:08,518 [INFO] watchfiles.main — 3 changes detected
+2026-05-21 14:37:12,255 [INFO] watchfiles.main — 2 changes detected
+2026-05-21 14:38:46,150 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-21 14:39:03,023 [INFO] patitas_sanas — Login POST exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:39:03,061 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:39:03,062 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 14:39:04,374 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:39:04,374 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:39:05,413 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:39:05,414 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:39:40,767 [INFO] patitas_sanas — Nuevo usuario registrado: juanpalots@gmail.com (id=usr-8375cf59)
+2026-05-21 14:39:40,950 [INFO] watchfiles.main — 1 change detected
+2026-05-21 14:39:44,625 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:39:44,627 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 14:39:45,532 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:39:45,534 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:39:54,321 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:39:54,323 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 14:39:54,805 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:39:54,806 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:39:58,245 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:39:58,245 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:40:03,302 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:40:03,305 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 14:41:10,675 [INFO] watchfiles.main — 1 change detected
+2026-05-21 14:43:43,817 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:43:43,822 [INFO] patitas_sanas — Turno reservado: id=tur-edd1e2e1 cliente=usr-003 vet=usr-001 fecha=2026-05-24 11:30-12:00
+2026-05-21 14:43:43,822 [INFO] patitas_sanas — [EMAIL SIMULADO] tipo=confirmacion para=admin@patitassanas.com turno=tur-edd1e2e1 msg='Su turno con Dr. Martín López el 2026-05-24 a las 11:30 fue confirmado.'
+2026-05-21 14:43:43,828 [INFO] patitas_sanas — [EMAIL SIMULADO] tipo=recordatorio para=admin@patitassanas.com turno=tur-edd1e2e1 msg='Recordatorio: mañana tiene turno a las 11:30 con Dr. Martín López.'
+2026-05-21 14:43:43,933 [INFO] watchfiles.main — 2 changes detected
+2026-05-21 14:43:49,446 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:43:49,448 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 14:43:50,568 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:43:50,570 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:43:51,749 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:43:51,750 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:08,135 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:08,138 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 14:44:10,162 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:10,164 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-22 — 0 turnos
+2026-05-21 14:44:10,518 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:10,520 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-23 — 0 turnos
+2026-05-21 14:44:10,688 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:10,690 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-24 — 1 turnos
+2026-05-21 14:44:14,519 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:14,521 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-24 — 1 turnos
+2026-05-21 14:44:17,754 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:17,755 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-25 — 0 turnos
+2026-05-21 14:44:18,663 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:18,664 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-26 — 0 turnos
+2026-05-21 14:44:18,962 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:18,963 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-27 — 0 turnos
+2026-05-21 14:44:19,819 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:19,821 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-28 — 0 turnos
+2026-05-21 14:44:20,619 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:20,620 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-29 — 0 turnos
+2026-05-21 14:44:20,999 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:21,000 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-30 — 0 turnos
+2026-05-21 14:44:21,169 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:21,170 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-31 — 0 turnos
+2026-05-21 14:44:21,323 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:21,324 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-01 — 0 turnos
+2026-05-21 14:44:22,050 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:22,051 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-02 — 0 turnos
+2026-05-21 14:44:22,585 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:22,589 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-03 — 0 turnos
+2026-05-21 14:44:22,737 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:22,739 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-04 — 0 turnos
+2026-05-21 14:44:22,920 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:22,922 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-05 — 0 turnos
+2026-05-21 14:44:23,125 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:23,126 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-06 — 0 turnos
+2026-05-21 14:44:23,262 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:23,263 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-07 — 0 turnos
+2026-05-21 14:44:23,415 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:23,416 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-08 — 0 turnos
+2026-05-21 14:44:23,578 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:23,579 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-09 — 0 turnos
+2026-05-21 14:44:23,716 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:23,717 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-10 — 0 turnos
+2026-05-21 14:44:25,202 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:25,204 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-09 — 0 turnos
+2026-05-21 14:44:25,428 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:25,429 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-08 — 0 turnos
+2026-05-21 14:44:25,581 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:25,582 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-07 — 0 turnos
+2026-05-21 14:44:25,719 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:25,720 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-06 — 0 turnos
+2026-05-21 14:44:25,873 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:25,874 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-05 — 0 turnos
+2026-05-21 14:44:26,035 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:26,036 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-04 — 0 turnos
+2026-05-21 14:44:26,188 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:26,189 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-03 — 0 turnos
+2026-05-21 14:44:26,350 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:26,351 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-02 — 0 turnos
+2026-05-21 14:44:26,512 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:26,513 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-01 — 0 turnos
+2026-05-21 14:44:26,682 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:26,684 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-31 — 0 turnos
+2026-05-21 14:44:27,046 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:27,047 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-30 — 0 turnos
+2026-05-21 14:44:27,350 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:27,351 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-29 — 0 turnos
+2026-05-21 14:44:27,569 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:27,571 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-28 — 0 turnos
+2026-05-21 14:44:27,837 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:27,838 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-27 — 0 turnos
+2026-05-21 14:44:28,015 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:28,016 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-26 — 0 turnos
+2026-05-21 14:44:28,169 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:28,170 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-25 — 0 turnos
+2026-05-21 14:44:28,339 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:28,340 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-24 — 1 turnos
+2026-05-21 14:44:28,669 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:28,670 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-23 — 0 turnos
+2026-05-21 14:44:28,912 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:28,913 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-22 — 0 turnos
+2026-05-21 14:44:29,074 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:29,075 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 14:44:29,254 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:29,255 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-20 — 0 turnos
+2026-05-21 14:44:29,474 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:29,475 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-19 — 0 turnos
+2026-05-21 14:44:29,846 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:29,847 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-18 — 0 turnos
+2026-05-21 14:44:30,024 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:30,026 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-17 — 0 turnos
+2026-05-21 14:44:30,227 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:30,228 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-16 — 0 turnos
+2026-05-21 14:44:30,387 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:44:30,388 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-15 — 0 turnos
+2026-05-21 14:45:05,749 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:45:05,753 [INFO] patitas_sanas — Turno reservado: id=tur-f9a9b5a8 cliente=usr-003 vet=usr-002 fecha=2026-05-23 09:30-10:00
+2026-05-21 14:45:05,754 [INFO] patitas_sanas — [EMAIL SIMULADO] tipo=confirmacion para=admin@patitassanas.com turno=tur-f9a9b5a8 msg='Su turno con Dra. Sofía Ramos el 2026-05-23 a las 09:30 fue confirmado.'
+2026-05-21 14:45:05,755 [INFO] patitas_sanas — [EMAIL SIMULADO] tipo=recordatorio para=admin@patitassanas.com turno=tur-f9a9b5a8 msg='Recordatorio: mañana tiene turno a las 09:30 con Dra. Sofía Ramos.'
+2026-05-21 14:45:05,870 [INFO] watchfiles.main — 2 changes detected
+2026-05-21 14:45:10,398 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:45:10,400 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 14:45:11,569 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:45:11,571 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-22 — 0 turnos
+2026-05-21 14:45:11,997 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:45:11,999 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-23 — 1 turnos
+2026-05-21 14:45:12,311 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:45:12,313 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-24 — 1 turnos
+2026-05-21 14:45:13,107 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:45:13,108 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-23 — 1 turnos
+2026-05-21 14:45:18,113 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:45:18,115 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-24 — 1 turnos
+2026-05-21 14:45:18,547 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:45:18,548 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-25 — 0 turnos
+2026-05-21 14:45:19,414 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:45:19,416 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-24 — 1 turnos
+2026-05-21 14:45:20,698 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 14:45:20,700 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-23 — 1 turnos
+2026-05-21 14:50:54,920 [INFO] watchfiles.main — 1 change detected
+2026-05-21 14:50:55,457 [INFO] watchfiles.main — 1 change detected
+2026-05-21 14:50:56,081 [INFO] watchfiles.main — 1 change detected
+2026-05-21 14:50:56,359 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-21 14:50:56,443 [INFO] watchfiles.main — 3 changes detected
+2026-05-21 15:14:32,636 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-21 15:17:46,516 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:21:58,777 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:22:00,046 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:24:12,015 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:24:12,524 [INFO] watchfiles.main — 4 changes detected
+2026-05-21 15:24:12,569 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-21 15:24:13,896 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:24:14,314 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-21 15:24:14,447 [INFO] watchfiles.main — 4 changes detected
+2026-05-21 15:24:16,631 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:24:16,976 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-21 15:24:17,117 [INFO] watchfiles.main — 4 changes detected
+2026-05-21 15:25:03,026 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-21 15:27:12,014 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:27:12,601 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:27:18,318 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:27:18,625 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-21 15:27:18,678 [INFO] watchfiles.main — 3 changes detected
+2026-05-21 15:27:20,434 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:27:20,782 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-21 15:27:20,911 [INFO] watchfiles.main — 4 changes detected
+2026-05-21 15:28:26,649 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:28:27,158 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:28:31,683 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:28:34,822 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:28:40,704 [INFO] watchfiles.main — 2 changes detected
+2026-05-21 15:28:41,062 [INFO] watchfiles.main — 3 changes detected
+2026-05-21 15:28:41,076 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-21 15:28:43,627 [INFO] watchfiles.main — 2 changes detected
+2026-05-21 15:29:00,136 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:29:00,502 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:29:05,091 [INFO] watchfiles.main — 2 changes detected
+2026-05-21 15:29:05,455 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:29:15,850 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:29:16,403 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:29:16,451 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-21 15:30:29,652 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-21 15:30:34,580 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:30:47,058 [INFO] patitas_sanas — Login POST exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:30:47,090 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:30:47,091 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 15:30:48,441 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:30:48,442 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:30:52,918 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:30:52,918 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:40:21,775 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:40:22,360 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:40:23,421 [INFO] watchfiles.main — 2 changes detected
+2026-05-21 15:40:28,430 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:40:53,606 [INFO] watchfiles.main — 2 changes detected
+2026-05-21 15:41:36,628 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-21 15:41:42,725 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:41:44,526 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:41:44,527 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 15:41:46,706 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:41:46,707 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 15:41:48,272 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:41:48,274 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 15:41:53,715 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:41:53,716 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 15:41:56,215 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:41:56,216 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 15:42:07,555 [INFO] patitas_sanas — Login POST exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:07,562 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:07,564 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 15:42:08,699 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:08,702 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:10,139 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:10,139 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:42,769 [INFO] patitas_sanas — Nuevo usuario registrado: iara@gmail.com (id=usr-2a279cc3)
+2026-05-21 15:42:42,848 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:42:45,279 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:45,280 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:47,683 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:47,686 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 15:42:48,452 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:48,452 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:48,806 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:48,807 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:48,977 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:48,977 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:49,178 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:49,178 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:54,307 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:42:54,307 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:43:34,566 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:43:34,572 [INFO] patitas_sanas — Turno reservado: id=tur-cdba3e73 cliente=usr-003 vet=usr-001 fecha=2026-05-26 09:30-10:00
+2026-05-21 15:43:34,573 [INFO] patitas_sanas — [EMAIL SIMULADO] tipo=confirmacion para=admin@patitassanas.com turno=tur-cdba3e73 msg='Su turno con Dr. Martín López el 2026-05-26 a las 09:30 fue confirmado.'
+2026-05-21 15:43:34,583 [INFO] patitas_sanas — [EMAIL SIMULADO] tipo=recordatorio para=admin@patitassanas.com turno=tur-cdba3e73 msg='Recordatorio: mañana tiene turno a las 09:30 con Dr. Martín López.'
+2026-05-21 15:43:34,641 [INFO] watchfiles.main — 2 changes detected
+2026-05-21 15:43:42,501 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:43:42,504 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 15:43:43,676 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:43:43,678 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-21 — 0 turnos
+2026-05-21 15:43:44,395 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:43:44,396 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-22 — 0 turnos
+2026-05-21 15:43:44,620 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:43:44,622 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-23 — 1 turnos
+2026-05-21 15:43:44,773 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:43:44,774 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-24 — 1 turnos
+2026-05-21 15:43:45,499 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:43:45,500 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-25 — 0 turnos
+2026-05-21 15:43:46,349 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-21 15:43:46,350 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-26 — 1 turnos
+2026-05-21 15:45:23,952 [INFO] watchfiles.main — 1 change detected
+2026-05-21 15:45:26,393 [INFO] watchfiles.main — 1 change detected
+2026-05-22 13:56:39,878 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-05-22 13:56:43,572 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-22 13:56:43,573 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-22 — 0 turnos
+2026-05-22 13:56:57,819 [INFO] patitas_sanas — Login POST exitoso: admin@patitassanas.com (rol=admin)
+2026-05-22 13:56:57,824 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-22 13:56:57,825 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-05-22 — 0 turnos
+2026-05-22 13:56:59,013 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-22 13:56:59,017 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-22 13:57:01,767 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-22 13:57:01,768 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-22 13:57:43,335 [INFO] patitas_sanas — Nuevo usuario registrado: pau@gmail.com (id=usr-ef38555f)
+2026-05-22 13:57:43,449 [INFO] watchfiles.main — 1 change detected
+2026-05-22 13:57:45,847 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
+2026-05-22 13:57:45,849 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
