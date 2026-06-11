@@ -1,0 +1,9 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/admin/page": "/admin",
+  "/admin/records/[petId]/page": "/admin/records/[petId]",
+  "/api/[...path]/route": "/api/[...path]",
+  "/booking/page": "/booking",
+  "/page": "/"
+}

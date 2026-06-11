@@ -1,0 +1,74 @@
+[
+  {
+    "id": "tur-001",
+    "cliente_id": "usr-004",
+    "mascota_id": "mas-001",
+    "veterinario_id": "usr-001",
+    "fecha": "2025-06-10",
+    "hora_inicio": "09:00",
+    "hora_fin": "09:30",
+    "servicio": "Consulta general",
+    "estado": "confirmado",
+    "notas": ""
+  },
+  {
+    "id": "tur-002",
+    "cliente_id": "usr-005",
+    "mascota_id": "mas-002",
+    "veterinario_id": "usr-002",
+    "fecha": "2025-06-10",
+    "hora_inicio": "10:00",
+    "hora_fin": "10:30",
+    "servicio": "Vacunación",
+    "estado": "confirmado",
+    "notas": ""
+  },
+  {
+    "id": "tur-edd1e2e1",
+    "cliente_id": "usr-003",
+    "mascota_id": "mas-001",
+    "veterinario_id": "usr-001",
+    "fecha": "2026-05-24",
+    "hora_inicio": "11:30",
+    "hora_fin": "12:00",
+    "servicio": "tiene la pata rota",
+    "estado": "confirmado",
+    "notas": "Dueño: juan | Mascota: maz | Tel: +54 9 11 6122-1961"
+  },
+  {
+    "id": "tur-f9a9b5a8",
+    "cliente_id": "usr-003",
+    "mascota_id": "mas-001",
+    "veterinario_id": "usr-002",
+    "fecha": "2026-05-23",
+    "hora_inicio": "09:30",
+    "hora_fin": "10:00",
+    "servicio": "algo le paso",
+    "estado": "confirmado",
+    "notas": "Dueño: kl | Mascota: max | Tel: 1148748389"
+  },
+  {
+    "id": "tur-cdba3e73",
+    "cliente_id": "usr-003",
+    "mascota_id": "mas-001",
+    "veterinario_id": "usr-001",
+    "fecha": "2026-05-26",
+    "hora_inicio": "09:30",
+    "hora_fin": "10:00",
+    "servicio": "se rompio la pata la tortuga",
+    "estado": "confirmado",
+    "notas": "Dueño: ana | Mascota: max | Tel: +54 9 11 4783-4434"
+  },
+  {
+    "id": "tur-dd8b7669",
+    "cliente_id": "usr-8d38d573",
+    "mascota_id": "mas-c89a9c6d",
+    "veterinario_id": "usr-001",
+    "fecha": "2026-06-12",
+    "hora_inicio": "09:00",
+    "hora_fin": "09:30",
+    "servicio": "le duele la pata",
+    "estado": "confirmado",
+    "notas": ""
+  }
+]

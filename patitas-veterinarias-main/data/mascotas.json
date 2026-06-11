@@ -1,0 +1,108 @@
+[
+  {
+    "id": "mas-001",
+    "nombre": "Firulais",
+    "especie": "Perro",
+    "raza": "Labrador",
+    "edad_anios": 3,
+    "peso_kg": 28.5,
+    "alergias": [
+      "Penicilina"
+    ],
+    "propietario_id": "usr-004",
+    "historial": [
+      {
+        "fecha": "2024-11-10",
+        "tipo": "consulta",
+        "diagnostico": "Otitis leve",
+        "tratamiento": "Gotas óticas 7 días",
+        "veterinario_id": "usr-001",
+        "notas_internas": "Propietario poco colaborador en la limpieza de orejas."
+      }
+    ],
+    "vacunas": [
+      {
+        "nombre": "Antirrábica",
+        "fecha_aplicacion": "2024-03-15",
+        "proxima_aplicacion": "2025-03-15"
+      },
+      {
+        "nombre": "Séxtuple",
+        "fecha_aplicacion": "2024-03-15",
+        "proxima_aplicacion": "2025-03-15"
+      }
+    ]
+  },
+  {
+    "id": "mas-002",
+    "nombre": "Michi",
+    "especie": "Gato",
+    "raza": "Siamés",
+    "edad_anios": 5,
+    "peso_kg": 4.2,
+    "alergias": [],
+    "propietario_id": "usr-005",
+    "historial": [
+      {
+        "fecha": "2025-01-20",
+        "tipo": "vacunacion",
+        "diagnostico": "Control anual",
+        "tratamiento": "Triple felina aplicada",
+        "veterinario_id": "usr-002",
+        "notas_internas": "Gato muy estresado. Usar guantes en próxima visita."
+      }
+    ],
+    "vacunas": [
+      {
+        "nombre": "Triple Felina",
+        "fecha_aplicacion": "2025-01-20",
+        "proxima_aplicacion": "2026-01-20"
+      }
+    ]
+  },
+  {
+    "id": "mas-8e414fac",
+    "nombre": "firulaisss",
+    "especie": "Ave",
+    "raza": "canario",
+    "edad_anios": null,
+    "peso_kg": null,
+    "alergias": [],
+    "propietario_id": "usr-1e3de19f",
+    "historial": [],
+    "vacunas": []
+  },
+  {
+    "id": "mas-94b813e1",
+    "nombre": "mish",
+    "especie": "Gato",
+    "raza": "naranja",
+    "edad_anios": null,
+    "peso_kg": null,
+    "alergias": [],
+    "propietario_id": "usr-dad99bd6",
+    "historial": [],
+    "vacunas": []
+  },
+  {
+    "id": "mas-c89a9c6d",
+    "nombre": "violeta",
+    "especie": "Perro",
+    "raza": "",
+    "edad_anios": null,
+    "peso_kg": null,
+    "alergias": [],
+    "propietario_id": "usr-8d38d573",
+    "historial": [
+      {
+        "fecha": "2026-06-11",
+        "tipo": "consulta",
+        "diagnostico": "Dolor de pata",
+        "tratamiento": "Ponerle una venda",
+        "veterinario_id": "usr-003",
+        "notas_internas": "Se accidento jugando"
+      }
+    ],
+    "vacunas": []
+  }
+]
