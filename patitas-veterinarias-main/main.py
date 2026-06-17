@@ -3,6 +3,10 @@
 ║        PATITAS SANAS — Backend API                              ║
 ║        Proyecto Académico — Testing de Aplicaciones — UADE      ║
 ║        FastAPI + JSON Persistence (sin DB relacional/NoSQL)     ║
+╠══════════════════════════════════════════════════════════════════╣
+║  BUGS INTENCIONALES ACTIVOS:                                    ║
+║  RF-A01-20260521-001 — Turnos superpuestos permitidos           ║
+║  RF-A03-20260521-002 — Recordatorios de email deshabilitados    ║
 ╚══════════════════════════════════════════════════════════════════╝
 """
 
@@ -15,7 +19,9 @@ from pathlib import Path
 from typing import Any, Dict, List, Literal, Optional
 
 from fastapi import Depends, FastAPI, HTTPException, status
+from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from pydantic import BaseModel
 
@@ -38,13 +44,13 @@ logger = logging.getLogger("patitas_sanas")
 DATA_DIR = Path("data")
 DATA_DIR.mkdir(exist_ok=True)
 
-USUARIOS_FILE    = DATA_DIR / "usuarios.json"
-TURNOS_FILE      = DATA_DIR / "turnos.json"
-MASCOTAS_FILE    = DATA_DIR / "mascotas.json"
+USUARIOS_FILE       = DATA_DIR / "usuarios.json"
+TURNOS_FILE         = DATA_DIR / "turnos.json"
+MASCOTAS_FILE       = DATA_DIR / "mascotas.json"
 NOTIFICACIONES_FILE = DATA_DIR / "notificaciones.json"
 
 # ─────────────────────────────────────────────
-# SEED DATA (precargada si los archivos no existen)
+# SEED DATA
 # ─────────────────────────────────────────────
 SEED_USUARIOS = [
     {
@@ -90,7 +96,6 @@ SEED_USUARIOS = [
 ]
 
 SEED_MASCOTAS = [
-    # ── mas-001: Perro ────────────────────────────────────────────────────────
     {
         "id": "mas-001",
         "nombre": "Rocco",
@@ -123,7 +128,6 @@ SEED_MASCOTAS = [
             },
         ],
     },
-    # ── mas-002: Gato ─────────────────────────────────────────────────────────
     {
         "id": "mas-002",
         "nombre": "Luna",
@@ -151,7 +155,6 @@ SEED_MASCOTAS = [
             }
         ],
     },
-    # ── mas-003: Ave ──────────────────────────────────────────────────────────
     {
         "id": "mas-003",
         "nombre": "Paco",
@@ -168,12 +171,11 @@ SEED_MASCOTAS = [
                 "diagnostico": "Control de plumaje y pico",
                 "tratamiento": "Suplemento vitamínico 30 días",
                 "veterinario_id": "usr-001",
-                "notas_internas": "Ave activa, sin signos de enfermedad. Dueño informado sobre dieta.",
+                "notas_internas": "Ave activa, sin signos de enfermedad.",
             }
         ],
         "vacunas": [],
     },
-    # ── mas-004: Otro ─────────────────────────────────────────────────────────
     {
         "id": "mas-004",
         "nombre": "Chispitas",
@@ -190,7 +192,7 @@ SEED_MASCOTAS = [
                 "diagnostico": "Revisión general de roedor",
                 "tratamiento": "Sin tratamiento requerido",
                 "veterinario_id": "usr-002",
-                "notas_internas": "Ejemplar saludable. Peso dentro del rango normal para la especie.",
+                "notas_internas": "Ejemplar saludable.",
             }
         ],
         "vacunas": [],
@@ -228,8 +230,9 @@ SEED_NOTIFICACIONES: List[Dict] = []
 
 
 # ─────────────────────────────────────────────
-# HELPERS DE PERSISTENCIA JSON
+# CAPA DE PERSISTENCIA
 # ─────────────────────────────────────────────
+
 def _load(path: Path, seed: Any) -> Any:
     if not path.exists():
         _save(path, seed)
@@ -243,18 +246,33 @@ def _save(path: Path, data: Any) -> None:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def load_usuarios()        -> List[Dict]: return _load(USUARIOS_FILE, SEED_USUARIOS)
-def save_usuarios(d)       -> None:       _save(USUARIOS_FILE, d)
-def load_turnos()          -> List[Dict]: return _load(TURNOS_FILE, SEED_TURNOS)
-def save_turnos(d)         -> None:       _save(TURNOS_FILE, d)
-def load_mascotas()        -> List[Dict]: return _load(MASCOTAS_FILE, SEED_MASCOTAS)
-def save_mascotas(d)       -> None:       _save(MASCOTAS_FILE, d)
-def load_notificaciones()  -> List[Dict]: return _load(NOTIFICACIONES_FILE, SEED_NOTIFICACIONES)
-def save_notificaciones(d) -> None:       _save(NOTIFICACIONES_FILE, d)
+def load_usuarios() -> List[Dict]:
+    return _load(USUARIOS_FILE, SEED_USUARIOS)
+
+def save_usuarios(data: list) -> None:
+    _save(USUARIOS_FILE, data)
+
+def load_turnos() -> List[Dict]:
+    return _load(TURNOS_FILE, SEED_TURNOS)
+
+def save_turnos(data: list) -> None:
+    _save(TURNOS_FILE, data)
+
+def load_mascotas() -> List[Dict]:
+    return _load(MASCOTAS_FILE, SEED_MASCOTAS)
+
+def save_mascotas(data: list) -> None:
+    _save(MASCOTAS_FILE, data)
+
+def load_notificaciones() -> List[Dict]:
+    return _load(NOTIFICACIONES_FILE, SEED_NOTIFICACIONES)
+
+def save_notificaciones(data: list) -> None:
+    _save(NOTIFICACIONES_FILE, data)
 
 
 # ─────────────────────────────────────────────
-# AUTH — HTTP Basic (simple, sin JWT)
+# AUTH — HTTP Basic
 # ─────────────────────────────────────────────
 security = HTTPBasic()
 
@@ -263,9 +281,9 @@ def get_current_user(credentials: HTTPBasicCredentials = Depends(security)) -> D
     usuarios = load_usuarios()
     for u in usuarios:
         if u["email"] == credentials.username and u["password"] == credentials.password:
-            logger.info("Login exitoso: %s (rol=%s)", u["email"], u["rol"])
+            logger.info("Login HTTP Basic exitoso: %s (rol=%s)", u["email"], u["rol"])
             return u
-    logger.warning("Login fallido para email: %s", credentials.username)
+    logger.warning("Login HTTP Basic fallido para: %s", credentials.username)
     raise HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Credenciales inválidas",
@@ -285,7 +303,7 @@ def require_roles(*roles: str):
 
 
 # ─────────────────────────────────────────────
-# PYDANTIC SCHEMAS
+# SCHEMAS Pydantic
 # ─────────────────────────────────────────────
 class RegistroUsuarioRequest(BaseModel):
     nombre: str
@@ -301,9 +319,9 @@ class LoginRequest(BaseModel):
 class ReservaTurnoRequest(BaseModel):
     mascota_id: str
     veterinario_id: str
-    fecha: str           # formato esperado: YYYY-MM-DD
-    hora_inicio: str     # formato esperado: HH:MM
-    hora_fin: str        # formato esperado: HH:MM
+    fecha: str
+    hora_inicio: str
+    hora_fin: str
     servicio: str
     notas: Optional[str] = ""
 
@@ -321,28 +339,22 @@ class VacunaRequest(BaseModel):
     proxima_aplicacion: str
 
 
-# Tipo de especie permitido — debe coincidir exactamente con las opciones del select del frontend.
-# Cualquier valor fuera de estos cuatro producirá un error 422 de Pydantic que el endpoint
-# convierte en 400 Bad Request con mensaje descriptivo.
 EspecieMascota = Literal["Perro", "Gato", "Ave", "Otro"]
 
 
 class RegistroMascotaRequest(BaseModel):
     nombre: str
-    especie: EspecieMascota          # ← validación estricta: solo "Perro", "Gato", "Ave", "Otro"
+    especie: EspecieMascota
     raza: Optional[str] = ""
     edad_anios: Optional[int] = None
     peso_kg: Optional[float] = None
     alergias: Optional[List[str]] = []
-    propietario_id: Optional[str] = None  # si no se envía, se asigna al usuario autenticado
+    propietario_id: Optional[str] = None
 
 
 # ─────────────────────────────────────────────
 # APP
 # ─────────────────────────────────────────────
-from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse
-
 app = FastAPI(
     title="Patitas Sanas — API",
     description=(
@@ -354,11 +366,7 @@ app = FastAPI(
 
 
 @app.exception_handler(RequestValidationError)
-async def validation_exception_handler(request, exc: RequestValidationError):
-    """
-    Convierte los errores de validación de Pydantic (422) en 400 Bad Request
-    con mensajes en español, especialmente para el campo `especie` de mascotas.
-    """
+def validation_exception_handler(request, exc: RequestValidationError):
     errores = exc.errors()
     for error in errores:
         campo = " → ".join(str(loc) for loc in error.get("loc", []))
@@ -372,15 +380,12 @@ async def validation_exception_handler(request, exc: RequestValidationError):
                     )
                 },
             )
-    # Para otros errores de validación, devolver 400 genérico con el detalle original
     return JSONResponse(
         status_code=400,
         content={"detail": [e["msg"] for e in errores]},
     )
 
-# ─────────────────────────────────────────────
-# CORS — permite peticiones desde el archivo HTML abierto localmente
-# ─────────────────────────────────────────────
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -392,7 +397,6 @@ app.add_middleware(
 
 @app.on_event("startup")
 def startup():
-    # Forzar inicialización de archivos JSON con seed data
     load_usuarios()
     load_turnos()
     load_mascotas()
@@ -415,19 +419,16 @@ def register(body: RegistroUsuarioRequest):
     Registra un nuevo usuario con rol **cliente**.
     Valida que el email no esté ya registrado.
 
-    > ⚠️ **BUG INTENCIONAL #1**: La validación de formato de email es laxa
-    > (solo verifica que contenga "@"), por lo que emails como `foo@` son aceptados.
+    > ⚠️ **BUG INTENCIONAL (validación laxa de email)**:
+    > Solo verifica que el email contenga "@".
+    > Emails como `foo@` son aceptados.
     """
     usuarios = load_usuarios()
 
-    # ── BUG #1: validación de email laxa ──────────────────────────────────
-    # Debería usar un regex robusto o EmailStr de Pydantic.
-    # Solo se verifica la presencia de "@".
+    # Validación laxa intencional — solo verifica presencia de "@"
     if "@" not in body.email:
         raise HTTPException(status_code=400, detail="Email inválido")
-    # ──────────────────────────────────────────────────────────────────────
 
-    # Verificar duplicado
     if any(u["email"] == body.email for u in usuarios):
         logger.warning("Registro fallido — email ya existe: %s", body.email)
         raise HTTPException(status_code=409, detail="El email ya está registrado")
@@ -436,7 +437,7 @@ def register(body: RegistroUsuarioRequest):
         "id": f"usr-{uuid.uuid4().hex[:8]}",
         "nombre": body.nombre,
         "email": body.email,
-        "password": body.password,   # ⚠️ en producción: hashear con bcrypt
+        "password": body.password,
         "rol": "cliente",
         "activo": True,
     }
@@ -448,14 +449,13 @@ def register(body: RegistroUsuarioRequest):
 
 @app.post(
     "/auth/login",
-    summary="Login de usuario (retorna datos del usuario)",
+    summary="Login de usuario",
     tags=["Autenticación"],
 )
 def login(body: LoginRequest):
     """
     Autentica al usuario con email y contraseña.
     Retorna los datos del usuario (sin contraseña) si las credenciales son correctas.
-    Funciona para clientes, veterinarios y administradores.
     """
     usuarios = load_usuarios()
     for u in usuarios:
@@ -478,7 +478,6 @@ def login(body: LoginRequest):
 def ver_disponibilidad(fecha: Optional[str] = None):
     """
     Retorna todos los turnos confirmados, opcionalmente filtrados por fecha (YYYY-MM-DD).
-    Discrimina por veterinario para visualizar disponibilidad en tiempo real.
     """
     turnos = load_turnos()
     usuarios = load_usuarios()
@@ -510,24 +509,18 @@ def reservar_turno(
 ):
     """
     Permite a un cliente autenticado reservar un turno.
-    Valida la **no superposición horaria** (doble booking) para el veterinario elegido.
-    Simula envío de email de confirmación y programa recordatorio 24 hs antes.
-
-    > ⚠️ **BUG INTENCIONAL #2**: La comparación de solapamiento se hace
-    > comparando strings HH:MM en lugar de objetos `datetime.time`, lo que
-    > produce resultados incorrectos cuando los minutos generan inversión
-    > lexicográfica (ej: "09:45" vs "10:00" funciona bien, pero la lógica
-    > de fin == inicio se considera solapamiento cuando no debería).
+    Simula envío de email de confirmación.
     """
     turnos = load_turnos()
     usuarios = load_usuarios()
 
-    # Verificar que el veterinario existe
-    vet = next((u for u in usuarios if u["id"] == body.veterinario_id and u["rol"] == "veterinario"), None)
+    vet = next(
+        (u for u in usuarios if u["id"] == body.veterinario_id and u["rol"] == "veterinario"),
+        None,
+    )
     if not vet:
         raise HTTPException(status_code=404, detail="Veterinario no encontrado")
 
-    # Verificar que la mascota pertenece al cliente (o el usuario es admin/vet)
     mascotas = load_mascotas()
     mascota = next((m for m in mascotas if m["id"] == body.mascota_id), None)
     if not mascota:
@@ -535,30 +528,31 @@ def reservar_turno(
     if current_user["rol"] == "cliente" and mascota["propietario_id"] != current_user["id"]:
         raise HTTPException(status_code=403, detail="La mascota no pertenece al usuario autenticado")
 
-    # ── BUG #2: comparación de solapamiento con strings ───────────────────
-    # Error sutil: se usa comparación lexicográfica de strings "HH:MM".
-    # Falla cuando hora_fin del turno nuevo == hora_inicio del turno existente
-    # (debería ser válido: turno back-to-back), ya que la condición ">=" lo
-    # rechaza incorrectamente.
-    turnos_vet_dia = [
-        t for t in turnos
-        if t["veterinario_id"] == body.veterinario_id
-        and t["fecha"] == body.fecha
-        and t["estado"] != "cancelado"
-    ]
-    for t in turnos_vet_dia:
-        # Solapamiento: nuevo_inicio < existente_fin AND nuevo_fin > existente_inicio
-        # BUG: se usa >= en lugar de > para nuevo_fin, rechazando turnos back-to-back
-        if body.hora_inicio < t["hora_fin"] and body.hora_fin >= t["hora_inicio"]:
-            logger.warning(
-                "Intento de doble booking — vet=%s fecha=%s %s-%s",
-                body.veterinario_id, body.fecha, body.hora_inicio, body.hora_fin,
-            )
-            raise HTTPException(
-                status_code=409,
-                detail=f"Conflicto de horario con turno existente ({t['hora_inicio']}–{t['hora_fin']})",
-            )
-    # ──────────────────────────────────────────────────────────────────────
+    # ===========================================
+    # BUG_ID: RF-A01-20260521-001
+    # ESTADO: INTENCIONAL
+    # DESCRIPCION:
+    # El sistema permite reservar turnos superpuestos.
+    # La validacion de solapamiento horario fue eliminada
+    # completamente. Dos o mas turnos pueden coincidir en
+    # el mismo veterinario, fecha y horario sin ningun error.
+    # NO CORREGIR.
+    # ===========================================
+    #
+    # CODIGO ORIGINAL eliminado intencionalmente:
+    # turnos_vet_dia = [
+    #     t for t in turnos
+    #     if t["veterinario_id"] == body.veterinario_id
+    #     and t["fecha"] == body.fecha
+    #     and t["estado"] != "cancelado"
+    # ]
+    # for t in turnos_vet_dia:
+    #     if body.hora_inicio < t["hora_fin"] and body.hora_fin > t["hora_inicio"]:
+    #         logger.warning("Intento de doble booking...")
+    #         raise HTTPException(
+    #             status_code=409,
+    #             detail=f"Conflicto de horario con turno existente ({t['hora_inicio']}-{t['hora_fin']})",
+    #         )
 
     nuevo_turno = {
         "id": f"tur-{uuid.uuid4().hex[:8]}",
@@ -580,7 +574,7 @@ def reservar_turno(
         body.fecha, body.hora_inicio, body.hora_fin,
     )
 
-    # ── Simular envío de email de confirmación ────────────────────────────
+    # Email de confirmacion (activo)
     _simular_notificacion(
         tipo="confirmacion",
         turno_id=nuevo_turno["id"],
@@ -588,19 +582,34 @@ def reservar_turno(
         mensaje=f"Su turno con {vet['nombre']} el {body.fecha} a las {body.hora_inicio} fue confirmado.",
     )
 
-    # ── Programar recordatorio 24 hs antes ───────────────────────────────
-    try:
-        dt_turno = datetime.strptime(f"{body.fecha} {body.hora_inicio}", "%Y-%m-%d %H:%M")
-        dt_recordatorio = dt_turno - timedelta(hours=24)
-        _simular_notificacion(
-            tipo="recordatorio",
-            turno_id=nuevo_turno["id"],
-            destinatario_email=current_user["email"],
-            mensaje=f"Recordatorio: mañana tiene turno a las {body.hora_inicio} con {vet['nombre']}.",
-            programado_para=dt_recordatorio.isoformat(),
-        )
-    except ValueError:
-        logger.error("No se pudo programar recordatorio — formato de fecha/hora inválido")
+    # ===========================================
+    # BUG_ID: RF-A03-20260521-002
+    # ESTADO: INTENCIONAL
+    # DESCRIPCION:
+    # No se envian correos de recordatorio 24 horas antes del turno.
+    # La llamada a _simular_notificacion() para tipo "recordatorio"
+    # fue deshabilitada completamente. El email de confirmacion
+    # funciona normalmente. Solo fallan los recordatorios.
+    # NO CORREGIR.
+    # ===========================================
+    #
+    # CODIGO ORIGINAL deshabilitado intencionalmente:
+    # try:
+    #     dt_turno = datetime.strptime(f"{body.fecha} {body.hora_inicio}", "%Y-%m-%d %H:%M")
+    #     dt_recordatorio = dt_turno - timedelta(hours=24)
+    #     _simular_notificacion(
+    #         tipo="recordatorio",
+    #         turno_id=nuevo_turno["id"],
+    #         destinatario_email=current_user["email"],
+    #         mensaje=f"Recordatorio: manana tiene turno a las {body.hora_inicio} con {vet['nombre']}.",
+    #         programado_para=dt_recordatorio.isoformat(),
+    #     )
+    # except ValueError:
+    #     logger.error("No se pudo programar recordatorio - formato invalido")
+    logger.debug(
+        "[RF-A03-20260521-002] Recordatorio de email DESHABILITADO intencionalmente — turno=%s",
+        nuevo_turno["id"],
+    )
 
     return {"mensaje": "Turno reservado exitosamente", "turno": nuevo_turno}
 
@@ -612,7 +621,7 @@ def _simular_notificacion(
     mensaje: str,
     programado_para: Optional[str] = None,
 ) -> None:
-    """Simula el envío de un email registrándolo en notificaciones.json y en los logs."""
+    """Simula el envio de un email registrandolo en notificaciones.json y en los logs."""
     notificaciones = load_notificaciones()
     nueva = {
         "id": f"not-{uuid.uuid4().hex[:8]}",
@@ -646,34 +655,15 @@ def registrar_mascota(
     body: RegistroMascotaRequest,
     current_user: Dict = Depends(get_current_user),
 ):
-    """
-    Da de alta una nueva mascota en el sistema.
-
-    - El campo **`especie`** acepta únicamente los valores del select del frontend:
-      `"Perro"`, `"Gato"`, `"Ave"` u `"Otro"`. Cualquier otro valor devuelve **400 Bad Request**.
-    - El campo **`nombre`** es obligatorio; el sistema no asigna nombres genéricos por defecto.
-    - Si `propietario_id` no se envía, la mascota queda asociada al usuario autenticado.
-    - Los clientes solo pueden registrar mascotas a su propio nombre.
-      Veterinarios y admins pueden especificar cualquier `propietario_id`.
-    """
-    # Pydantic ya valida que `especie` sea uno de los Literal permitidos.
-    # Si llega un valor inválido, Pydantic lanza ValidationError → FastAPI lo
-    # convierte en 422 por defecto. Lo interceptamos para devolver 400 con
-    # mensaje en español claro para el frontend.
-    # (La intercepción ocurre a nivel de exception handler global; aquí la
-    # validación de negocio es la que sigue.)
-
-    # Nombre no puede estar vacío (Pydantic valida que exista, pero no que sea no-vacío)
+    """Da de alta una nueva mascota en el sistema."""
     if not body.nombre or not body.nombre.strip():
         raise HTTPException(
             status_code=400,
-            detail="El nombre de la mascota es obligatorio. No se permiten nombres vacíos.",
+            detail="El nombre de la mascota es obligatorio. No se permiten nombres vacios.",
         )
 
-    # Determinar propietario
     usuarios = load_usuarios()
     if body.propietario_id:
-        # Solo veterinarios y admins pueden asignar a otro propietario
         if current_user["rol"] == "cliente" and body.propietario_id != current_user["id"]:
             raise HTTPException(
                 status_code=403,
@@ -690,7 +680,7 @@ def registrar_mascota(
     nueva_mascota = {
         "id": f"mas-{uuid.uuid4().hex[:8]}",
         "nombre": body.nombre.strip(),
-        "especie": body.especie,           # valor ya validado por Literal
+        "especie": body.especie,
         "raza": body.raza or "",
         "edad_anios": body.edad_anios,
         "peso_kg": body.peso_kg,
@@ -711,7 +701,7 @@ def registrar_mascota(
 
 @app.get(
     "/mascotas/{mascota_id}/historial",
-    summary="Obtener historial clínico de una mascota",
+    summary="Obtener historial clinico de una mascota",
     tags=["Historial Clínico"],
 )
 def get_historial(
@@ -720,35 +710,32 @@ def get_historial(
 ):
     """
     Retorna el expediente completo de la mascota.
-    - **Clientes**: ven todos los datos *excepto* `notas_internas`.
-    - **Veterinarios / Admin**: ven el expediente completo incluyendo notas internas (RF-B03).
+    - Clientes: ven todos los datos excepto notas_internas.
+    - Veterinarios / Admin: ven el expediente completo.
     """
     mascotas = load_mascotas()
     mascota = next((m for m in mascotas if m["id"] == mascota_id), None)
     if not mascota:
         raise HTTPException(status_code=404, detail="Mascota no encontrada")
 
-    # Control de acceso: clientes solo pueden ver sus propias mascotas
     if current_user["rol"] == "cliente" and mascota["propietario_id"] != current_user["id"]:
         raise HTTPException(status_code=403, detail="Acceso denegado")
 
     logger.info("Historial consultado: mascota=%s por usuario=%s", mascota_id, current_user["id"])
 
-    # Filtrar notas_internas si el usuario es cliente (RF-B03)
     resultado = dict(mascota)
     if current_user["rol"] == "cliente":
-        historial_filtrado = []
-        for entrada in resultado.get("historial", []):
-            entrada_publica = {k: v for k, v in entrada.items() if k != "notas_internas"}
-            historial_filtrado.append(entrada_publica)
-        resultado["historial"] = historial_filtrado
+        resultado["historial"] = [
+            {k: v for k, v in entrada.items() if k != "notas_internas"}
+            for entrada in resultado.get("historial", [])
+        ]
 
     return resultado
 
 
 @app.post(
     "/mascotas/{mascota_id}/historial",
-    summary="Agregar entrada al historial clínico",
+    summary="Agregar entrada al historial clinico",
     tags=["Historial Clínico"],
     status_code=201,
 )
@@ -757,11 +744,7 @@ def add_historial(
     body: HistorialEntradaRequest,
     current_user: Dict = Depends(require_roles("veterinario", "admin")),
 ):
-    """
-    Agrega un diagnóstico, tratamiento o registro sanitario al historial de la mascota.
-    **Requiere rol veterinario o admin.**
-    El campo `notas_internas` solo puede ser cargado por veterinarios (RF-B03).
-    """
+    """Agrega un diagnostico o registro sanitario. Requiere rol veterinario o admin."""
     mascotas = load_mascotas()
     idx = next((i for i, m in enumerate(mascotas) if m["id"] == mascota_id), None)
     if idx is None:
@@ -796,28 +779,22 @@ def add_vacuna(
     current_user: Dict = Depends(require_roles("veterinario", "admin")),
 ):
     """
-    Registra una vacuna con fecha de aplicación y próxima aplicación (RF-B02).
-    **Requiere rol veterinario o admin.**
+    Registra una vacuna con fecha de aplicacion y proxima aplicacion.
+    Requiere rol veterinario o admin.
 
-    > ⚠️ **BUG INTENCIONAL #3**: No se valida que `proxima_aplicacion` sea
-    > posterior a `fecha_aplicacion`. Se aceptan calendarios invertidos
-    > (ej: próxima aplicación anterior a la fecha de aplicación actual).
+    > BUG INTENCIONAL: No se valida que proxima_aplicacion sea posterior
+    > a fecha_aplicacion. Acepta cualquier orden de fechas.
     """
     mascotas = load_mascotas()
     idx = next((i for i, m in enumerate(mascotas) if m["id"] == mascota_id), None)
     if idx is None:
         raise HTTPException(status_code=404, detail="Mascota no encontrada")
 
-    # ── BUG #3: sin validación de orden de fechas ─────────────────────────
-    # Debería verificar: proxima_aplicacion > fecha_aplicacion
-    # Tampoco se valida que las fechas tengan formato YYYY-MM-DD correcto.
     nueva_vacuna = {
         "nombre": body.nombre,
         "fecha_aplicacion": body.fecha_aplicacion,
         "proxima_aplicacion": body.proxima_aplicacion,
     }
-    # ──────────────────────────────────────────────────────────────────────
-
     mascotas[idx]["vacunas"].append(nueva_vacuna)
     save_mascotas(mascotas)
     logger.info(
@@ -833,18 +810,14 @@ def add_vacuna(
 
 @app.get(
     "/admin/agenda",
-    summary="Agenda diaria centralizada (panel interno)",
+    summary="Agenda diaria centralizada",
     tags=["Administración"],
 )
 def admin_agenda(
     fecha: Optional[str] = None,
     current_user: Dict = Depends(require_roles("veterinario", "admin")),
 ):
-    """
-    Vista centralizada de todos los turnos del día para veterinarios y personal administrativo.
-    Filtra por fecha si se proporciona (YYYY-MM-DD), sino retorna todos los turnos.
-    Incluye datos del cliente y la mascota para acceso rápido desde la agenda (RF-C01).
-    """
+    """Vista centralizada de todos los turnos. Filtra por fecha si se proporciona."""
     turnos = load_turnos()
     usuarios = load_usuarios()
     mascotas = load_mascotas()
@@ -852,17 +825,18 @@ def admin_agenda(
     if fecha:
         turnos = [t for t in turnos if t["fecha"] == fecha]
 
-    # Enriquecer cada turno con nombre de cliente, mascota y veterinario
+    usuarios_idx = {u["id"]: u for u in usuarios}
+    mascotas_idx = {m["id"]: m for m in mascotas}
+
     agenda = []
     for t in sorted(turnos, key=lambda x: (x["fecha"], x["hora_inicio"])):
-        cliente = next((u for u in usuarios if u["id"] == t["cliente_id"]), {})
-        mascota = next((m for m in mascotas if m["id"] == t["mascota_id"]), {})
-        vet     = next((u for u in usuarios if u["id"] == t["veterinario_id"]), {})
+        cliente = usuarios_idx.get(t["cliente_id"], {})
+        mascota = mascotas_idx.get(t["mascota_id"], {})
+        vet = usuarios_idx.get(t["veterinario_id"], {})
         agenda.append({
             **t,
-            "veterinario_id": t["veterinario_id"],
             "cliente_nombre": cliente.get("nombre", "—"),
-            "cliente_email":  cliente.get("email", "—"),
+            "cliente_email": cliente.get("email", "—"),
             "mascota_nombre": mascota.get("nombre", "—"),
             "mascota_especie": mascota.get("especie", "—"),
             "veterinario_nombre": vet.get("nombre", "—"),
@@ -883,12 +857,9 @@ def admin_agenda(
 def admin_usuarios(
     current_user: Dict = Depends(require_roles("admin")),
 ):
-    """Retorna todos los usuarios (sin contraseñas). Solo accesible por **admin**."""
+    """Retorna todos los usuarios (sin contraseñas). Solo accesible por admin."""
     usuarios = load_usuarios()
-    return [
-        {k: v for k, v in u.items() if k != "password"}
-        for u in usuarios
-    ]
+    return [{k: v for k, v in u.items() if k != "password"} for u in usuarios]
 
 
 @app.get(
@@ -899,22 +870,8 @@ def admin_usuarios(
 def admin_mascotas(
     current_user: Dict = Depends(require_roles("veterinario", "admin")),
 ):
-    """Retorna todas las mascotas con su historial completo (incluye notas internas)."""
+    """Retorna todas las mascotas con su historial completo."""
     mascotas = load_mascotas()
-
-    # Capa de protección: si un cliente llegara a este endpoint, se sanitiza
-    # el historial eliminando notas_internas (igual que en /mascotas/{id}/historial)
-    if current_user["rol"] == "cliente":
-        mascotas_sanitizadas = []
-        for mascota in mascotas:
-            m = dict(mascota)
-            m["historial"] = [
-                {k: v for k, v in entrada.items() if k != "notas_internas"}
-                for entrada in m.get("historial", [])
-            ]
-            mascotas_sanitizadas.append(m)
-        return mascotas_sanitizadas
-
     return mascotas
 
 
@@ -938,39 +895,16 @@ def health():
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# NOTAS PARA EL EQUIPO DE QA — BUGS INTENCIONALES SEMBRADOS
+# TABLA DE BUGS INTENCIONALES ACTIVOS EN ESTE ARCHIVO
 # ─────────────────────────────────────────────────────────────────────────────
 #
-# ┌──────────────────────────────────────────────────────────────────────────┐
-# │  BUG #1 — Validación de email laxa en /auth/register                    │
-# │  Ubicación: función register()                                           │
-# │  Descripción: La validación solo verifica la presencia del carácter "@". │
-# │  Emails como "usuario@", "@dominio.com", "a@b" o "test@ .com" son        │
-# │  aceptados sin error.                                                    │
-# │  Comportamiento esperado: rechazar emails que no cumplan RFC 5322.       │
-# │  Cómo reproducirlo: POST /auth/register con email = "invalido@"         │
-# │  → El sistema registra el usuario sin error.                             │
-# ├──────────────────────────────────────────────────────────────────────────┤
-# │  BUG #2 — Lógica de detección de solapamiento incorrecta en /turnos/    │
-# │           reservar                                                       │
-# │  Ubicación: función reservar_turno()                                     │
-# │  Descripción: La condición usa ">=" para comparar hora_fin del nuevo    │
-# │  turno contra hora_inicio del turno existente. Esto provoca que dos      │
-# │  turnos "back-to-back" (ej: 09:00-09:30 y 09:30-10:00) sean rechazados  │
-# │  con conflicto de horario, aunque en realidad son consecutivos y         │
-# │  válidos. El sistema rechaza más turnos de los que debería.              │
-# │  Cómo reproducirlo: reservar turno A (09:00-09:30), luego turno B       │
-# │  (09:30-10:00) con el mismo veterinario → Error 409 incorrecto.         │
-# ├──────────────────────────────────────────────────────────────────────────┤
-# │  BUG #3 — Sin validación de orden de fechas en /mascotas/{id}/vacunas   │
-# │  Ubicación: función add_vacuna()                                         │
-# │  Descripción: El endpoint acepta registros de vacunas donde              │
-# │  "proxima_aplicacion" es anterior a "fecha_aplicacion". Tampoco valida  │
-# │  el formato de fecha (acepta strings arbitrarios como "hoy" o "2025").  │
-# │  Esto genera calendarios sanitarios incoherentes en la base de datos.   │
-# │  Cómo reproducirlo: POST /mascotas/mas-001/vacunas con                  │
-# │  fecha_aplicacion="2025-12-01" y proxima_aplicacion="2024-01-01"        │
-# │  → El sistema acepta el registro sin error.                              │
-# └──────────────────────────────────────────────────────────────────────────┘
+#  BUG_ID               FUNCION           DESCRIPCION
+#  RF-A01-20260521-001  reservar_turno()  Validacion de solapamiento eliminada.
+#                                         Dos turnos pueden coincidir en mismo
+#                                         veterinario/fecha/horario sin error.
+#
+#  RF-A03-20260521-002  reservar_turno()  Llamada a _simular_notificacion()
+#                                         para tipo="recordatorio" deshabilitada.
+#                                         No se generan recordatorios 24hs antes.
 #
 # ─────────────────────────────────────────────────────────────────────────────

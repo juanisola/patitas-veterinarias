@@ -471,3 +471,175 @@
 2026-06-11 17:05:53,084 [INFO] patitas_sanas — Login exitoso: admin@patitassanas.com (rol=admin)
 2026-06-11 17:05:53,086 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-11 — 0 turnos
 2026-06-11 17:05:53,086 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-11 — 0 turnos
+2026-06-12 16:54:12,647 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-06-17 14:06:12,590 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-06-17 14:10:58,060 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-06-17 14:11:57,322 [WARNING] patitas_sanas — Login POST fallido: string
+2026-06-17 14:11:59,616 [WARNING] patitas_sanas — Login POST fallido: string
+2026-06-17 14:13:18,221 [INFO] patitas_sanas — Login POST exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:13:21,497 [INFO] patitas_sanas — Login POST exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:13:21,982 [INFO] patitas_sanas — Login POST exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:13:22,179 [INFO] patitas_sanas — Login POST exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:13:23,835 [INFO] patitas_sanas — Login POST exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:23,956 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-06-17 14:21:37,655 [INFO] patitas_sanas — Login POST exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:37,701 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:37,703 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-17 — 0 turnos
+2026-06-17 14:21:37,708 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:37,709 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-17 — 0 turnos
+2026-06-17 14:21:41,322 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:41,323 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-18 — 0 turnos
+2026-06-17 14:21:41,619 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:41,620 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-19 — 0 turnos
+2026-06-17 14:21:41,773 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:41,775 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-20 — 0 turnos
+2026-06-17 14:21:42,854 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:42,856 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-19 — 0 turnos
+2026-06-17 14:21:43,043 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:43,043 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-18 — 0 turnos
+2026-06-17 14:21:43,192 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:43,193 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-17 — 0 turnos
+2026-06-17 14:21:43,351 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:43,352 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-16 — 0 turnos
+2026-06-17 14:21:43,510 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:43,511 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-15 — 0 turnos
+2026-06-17 14:21:43,683 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:43,684 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-14 — 0 turnos
+2026-06-17 14:21:43,843 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:43,844 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-13 — 0 turnos
+2026-06-17 14:21:44,002 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:44,003 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-12 — 1 turnos
+2026-06-17 14:21:45,339 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:45,340 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-13 — 0 turnos
+2026-06-17 14:21:45,462 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:45,463 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-14 — 0 turnos
+2026-06-17 14:21:45,820 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:45,821 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-15 — 0 turnos
+2026-06-17 14:21:45,983 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:45,984 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-16 — 0 turnos
+2026-06-17 14:21:46,158 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:46,159 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-17 — 0 turnos
+2026-06-17 14:21:46,343 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:46,345 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-18 — 0 turnos
+2026-06-17 14:21:46,612 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:46,613 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-19 — 0 turnos
+2026-06-17 14:21:46,781 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:46,782 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-20 — 0 turnos
+2026-06-17 14:21:46,992 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:46,993 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-21 — 0 turnos
+2026-06-17 14:21:47,338 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:47,339 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-22 — 0 turnos
+2026-06-17 14:21:47,713 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:47,714 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-23 — 0 turnos
+2026-06-17 14:21:48,267 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:48,269 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-24 — 0 turnos
+2026-06-17 14:21:48,600 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:48,601 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-25 — 0 turnos
+2026-06-17 14:21:49,047 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:49,048 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-26 — 0 turnos
+2026-06-17 14:21:49,255 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:21:49,256 [INFO] patitas_sanas — Agenda consultada por martin.lopez@patitassanas.com (rol=veterinario) — fecha=2026-06-27 — 0 turnos
+2026-06-17 14:22:52,951 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:22:52,952 [INFO] patitas_sanas — Login exitoso: martin.lopez@patitassanas.com (rol=veterinario)
+2026-06-17 14:24:20,947 [WARNING] patitas_sanas — Registro fallido — email ya existe: iara@gmail.com
+2026-06-17 14:24:20,970 [WARNING] patitas_sanas — Login POST fallido: iara@gmail.com
+2026-06-17 14:24:22,201 [WARNING] patitas_sanas — Registro fallido — email ya existe: iara@gmail.com
+2026-06-17 14:24:22,216 [WARNING] patitas_sanas — Login POST fallido: iara@gmail.com
+2026-06-17 14:24:22,438 [WARNING] patitas_sanas — Registro fallido — email ya existe: iara@gmail.com
+2026-06-17 14:24:22,449 [WARNING] patitas_sanas — Login POST fallido: iara@gmail.com
+2026-06-17 14:24:22,599 [WARNING] patitas_sanas — Registro fallido — email ya existe: iara@gmail.com
+2026-06-17 14:24:22,606 [WARNING] patitas_sanas — Login POST fallido: iara@gmail.com
+2026-06-17 14:24:22,765 [WARNING] patitas_sanas — Registro fallido — email ya existe: iara@gmail.com
+2026-06-17 14:24:22,774 [WARNING] patitas_sanas — Login POST fallido: iara@gmail.com
+2026-06-17 14:24:22,904 [WARNING] patitas_sanas — Registro fallido — email ya existe: iara@gmail.com
+2026-06-17 14:24:22,914 [WARNING] patitas_sanas — Login POST fallido: iara@gmail.com
+2026-06-17 14:24:23,064 [WARNING] patitas_sanas — Registro fallido — email ya existe: iara@gmail.com
+2026-06-17 14:24:23,079 [WARNING] patitas_sanas — Login POST fallido: iara@gmail.com
+2026-06-17 14:24:23,218 [WARNING] patitas_sanas — Registro fallido — email ya existe: iara@gmail.com
+2026-06-17 14:24:23,227 [WARNING] patitas_sanas — Login POST fallido: iara@gmail.com
+2026-06-17 14:24:23,375 [WARNING] patitas_sanas — Registro fallido — email ya existe: iara@gmail.com
+2026-06-17 14:24:23,383 [WARNING] patitas_sanas — Login POST fallido: iara@gmail.com
+2026-06-17 14:24:23,533 [WARNING] patitas_sanas — Registro fallido — email ya existe: iara@gmail.com
+2026-06-17 14:24:23,545 [WARNING] patitas_sanas — Login POST fallido: iara@gmail.com
+2026-06-17 14:29:07,340 [INFO] patitas_sanas — Nuevo usuario registrado: iara1@gmail.com (id=usr-7ffdce1d)
+2026-06-17 14:29:07,354 [INFO] patitas_sanas — Login exitoso: iara1@gmail.com (rol=cliente)
+2026-06-17 14:29:07,358 [INFO] patitas_sanas — Mascota registrada: id=mas-ca24d8ee nombre='carlos' especie=Gato propietario=usr-7ffdce1d por usuario=usr-7ffdce1d
+2026-06-17 14:29:07,365 [INFO] patitas_sanas — Login exitoso: iara1@gmail.com (rol=cliente)
+2026-06-17 14:29:07,366 [INFO] patitas_sanas — Turno reservado: id=tur-5e978eae cliente=usr-7ffdce1d vet=usr-001 fecha=2026-06-18 09:00-09:30
+2026-06-17 14:29:07,366 [INFO] patitas_sanas — [EMAIL SIMULADO] tipo=confirmacion para=iara1@gmail.com turno=tur-5e978eae msg='Su turno con Dr. Martín López el 2026-06-18 a las 09:00 fue confirmado.'
+2026-06-17 14:29:07,376 [INFO] patitas_sanas — [EMAIL SIMULADO] tipo=recordatorio para=iara1@gmail.com turno=tur-5e978eae msg='Recordatorio: mañana tiene turno a las 09:00 con Dr. Martín López.'
+2026-06-17 14:29:07,444 [INFO] watchfiles.main — 4 changes detected
+2026-06-17 14:29:45,896 [INFO] patitas_sanas — Nuevo usuario registrado: juan2@gmail.com (id=usr-e26c6d73)
+2026-06-17 14:29:45,912 [INFO] patitas_sanas — Login exitoso: juan2@gmail.com (rol=cliente)
+2026-06-17 14:29:45,914 [INFO] patitas_sanas — Mascota registrada: id=mas-a731b416 nombre='Wendy' especie=Perro propietario=usr-e26c6d73 por usuario=usr-e26c6d73
+2026-06-17 14:29:45,924 [INFO] patitas_sanas — Login exitoso: juan2@gmail.com (rol=cliente)
+2026-06-17 14:29:45,925 [WARNING] patitas_sanas — Intento de doble booking — vet=usr-001 fecha=2026-06-18 09:00-09:30
+2026-06-17 14:29:46,011 [INFO] watchfiles.main — 2 changes detected
+2026-06-17 14:56:19,650 [INFO] patitas_sanas — Patitas Sanas API iniciada. Archivos JSON inicializados.
+2026-06-17 14:56:33,270 [INFO] patitas_sanas — Login POST exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:33,327 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:33,328 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-17 — 0 turnos
+2026-06-17 14:56:33,331 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:33,332 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-17 — 0 turnos
+2026-06-17 14:56:36,125 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:36,126 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-16 — 0 turnos
+2026-06-17 14:56:36,299 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:36,300 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-15 — 0 turnos
+2026-06-17 14:56:36,480 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:36,481 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-14 — 0 turnos
+2026-06-17 14:56:36,625 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:36,626 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-13 — 0 turnos
+2026-06-17 14:56:36,759 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:36,760 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-12 — 1 turnos
+2026-06-17 14:56:36,923 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:36,924 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-11 — 0 turnos
+2026-06-17 14:56:37,514 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:37,516 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-12 — 1 turnos
+2026-06-17 14:56:37,655 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:37,656 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-13 — 0 turnos
+2026-06-17 14:56:37,983 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:37,984 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-14 — 0 turnos
+2026-06-17 14:56:38,160 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:38,161 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-15 — 0 turnos
+2026-06-17 14:56:38,324 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:38,325 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-16 — 0 turnos
+2026-06-17 14:56:38,475 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:38,477 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-17 — 0 turnos
+2026-06-17 14:56:39,728 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:39,729 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-16 — 0 turnos
+2026-06-17 14:56:39,856 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:39,857 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-15 — 0 turnos
+2026-06-17 14:56:40,026 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:40,028 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-14 — 0 turnos
+2026-06-17 14:56:40,191 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:40,192 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-13 — 0 turnos
+2026-06-17 14:56:40,379 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:40,380 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-12 — 1 turnos
+2026-06-17 14:56:40,573 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:40,574 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-11 — 0 turnos
+2026-06-17 14:56:41,180 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:41,182 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-12 — 1 turnos
+2026-06-17 14:56:41,447 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:41,448 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-13 — 0 turnos
+2026-06-17 14:56:41,596 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:41,597 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-14 — 0 turnos
+2026-06-17 14:56:41,759 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:41,760 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-15 — 0 turnos
+2026-06-17 14:56:41,897 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:41,899 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-16 — 0 turnos
+2026-06-17 14:56:42,064 [INFO] patitas_sanas — Login HTTP Basic exitoso: admin@patitassanas.com (rol=admin)
+2026-06-17 14:56:42,064 [INFO] patitas_sanas — Agenda consultada por admin@patitassanas.com (rol=admin) — fecha=2026-06-17 — 0 turnos
+2026-06-17 14:57:44,671 [INFO] patitas_sanas — Nuevo usuario registrado: iara2@gmail.com (id=usr-900493ed)
+2026-06-17 14:57:44,688 [INFO] patitas_sanas — Login HTTP Basic exitoso: iara2@gmail.com (rol=cliente)
+2026-06-17 14:57:44,691 [INFO] patitas_sanas — Mascota registrada: id=mas-770da715 nombre='pupii' especie=Gato propietario=usr-900493ed por usuario=usr-900493ed
+2026-06-17 14:57:44,697 [INFO] patitas_sanas — Login HTTP Basic exitoso: iara2@gmail.com (rol=cliente)
+2026-06-17 14:57:44,698 [INFO] patitas_sanas — Turno reservado: id=tur-f23c228d cliente=usr-900493ed vet=usr-001 fecha=2026-06-18 09:00-09:30
+2026-06-17 14:57:44,699 [INFO] patitas_sanas — [EMAIL SIMULADO] tipo=confirmacion para=iara2@gmail.com turno=tur-f23c228d msg='Su turno con Dr. Martín López el 2026-06-18 a las 09:00 fue confirmado.'
+2026-06-17 14:57:44,799 [INFO] watchfiles.main — 4 changes detected
+2026-06-17 14:59:12,938 [INFO] patitas_sanas — Nuevo usuario registrado: juanti@gmail.com (id=usr-32255cc4)
+2026-06-17 14:59:12,955 [INFO] patitas_sanas — Login HTTP Basic exitoso: juanti@gmail.com (rol=cliente)
+2026-06-17 14:59:12,957 [INFO] patitas_sanas — Mascota registrada: id=mas-e965c731 nombre='winnie' especie=Gato propietario=usr-32255cc4 por usuario=usr-32255cc4
+2026-06-17 14:59:12,964 [INFO] patitas_sanas — Login HTTP Basic exitoso: juanti@gmail.com (rol=cliente)
+2026-06-17 14:59:12,965 [INFO] patitas_sanas — Turno reservado: id=tur-f8315453 cliente=usr-32255cc4 vet=usr-001 fecha=2026-06-18 09:00-09:30
+2026-06-17 14:59:12,966 [INFO] patitas_sanas — [EMAIL SIMULADO] tipo=confirmacion para=juanti@gmail.com turno=tur-f8315453 msg='Su turno con Dr. Martín López el 2026-06-18 a las 09:00 fue confirmado.'
+2026-06-17 14:59:13,038 [INFO] watchfiles.main — 4 changes detected

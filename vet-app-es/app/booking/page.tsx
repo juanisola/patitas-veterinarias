@@ -78,11 +78,34 @@ export default function BookingPage() {
         const regResult = await apiRegister(ownerName, ownerEmail, ownerPassword);
         userId = regResult.id;
       } catch (err: unknown) {
-        // Si el email ya existe, intentar login directamente
+        /*
+        ===========================================
+        BUG_ID: RF-C02-20260521-003
+        ESTADO: INTENCIONAL
+        DESCRIPCION:
+        Cuando el email ya esta registrado, el sistema
+        deberia hacer login automatico con las credenciales
+        provistas. En cambio, lanza "Credenciales invalidas"
+        sin intentar autenticar. El usuario existente no puede
+        reservar un nuevo turno desde el formulario publico.
+        NO CORREGIR.
+        ===========================================
+
+        CODIGO ORIGINAL (fallback a login — deshabilitado intencionalmente):
         const message = err instanceof Error ? err.message : "";
-        if (message.includes("ya está registrado")) {
+        if (message.includes("ya esta registrado")) {
           const user = await apiLogin(ownerEmail, ownerPassword);
           userId = user.id;
+        } else {
+          throw err;
+        }
+        */
+        // BUG RF-C02: en lugar de intentar login, siempre re-lanza el error
+        // con el mensaje generico "Credenciales invalidas", ocultando la
+        // causa real (email duplicado) y bloqueando al usuario existente.
+        const message = err instanceof Error ? err.message : "";
+        if (message.includes("ya está registrado")) {
+          throw new Error("Credenciales inválidas");
         } else {
           throw err;
         }

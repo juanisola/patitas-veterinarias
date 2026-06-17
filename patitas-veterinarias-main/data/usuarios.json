@@ -86,5 +86,37 @@
     "password": "euge123",
     "rol": "cliente",
     "activo": true
+  },
+  {
+    "id": "usr-7ffdce1d",
+    "nombre": "iara",
+    "email": "iara1@gmail.com",
+    "password": "123456",
+    "rol": "cliente",
+    "activo": true
+  },
+  {
+    "id": "usr-e26c6d73",
+    "nombre": "juan",
+    "email": "juan2@gmail.com",
+    "password": "123456",
+    "rol": "cliente",
+    "activo": true
+  },
+  {
+    "id": "usr-900493ed",
+    "nombre": "iara",
+    "email": "iara2@gmail.com",
+    "password": "123456",
+    "rol": "cliente",
+    "activo": true
+  },
+  {
+    "id": "usr-32255cc4",
+    "nombre": "juan",
+    "email": "juanti@gmail.com",
+    "password": "123456",
+    "rol": "cliente",
+    "activo": true
   }
 ]

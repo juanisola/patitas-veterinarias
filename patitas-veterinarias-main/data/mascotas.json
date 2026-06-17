@@ -104,5 +104,53 @@
       }
     ],
     "vacunas": []
+  },
+  {
+    "id": "mas-ca24d8ee",
+    "nombre": "carlos",
+    "especie": "Gato",
+    "raza": "",
+    "edad_anios": null,
+    "peso_kg": null,
+    "alergias": [],
+    "propietario_id": "usr-7ffdce1d",
+    "historial": [],
+    "vacunas": []
+  },
+  {
+    "id": "mas-a731b416",
+    "nombre": "Wendy",
+    "especie": "Perro",
+    "raza": "",
+    "edad_anios": null,
+    "peso_kg": null,
+    "alergias": [],
+    "propietario_id": "usr-e26c6d73",
+    "historial": [],
+    "vacunas": []
+  },
+  {
+    "id": "mas-770da715",
+    "nombre": "pupii",
+    "especie": "Gato",
+    "raza": "",
+    "edad_anios": null,
+    "peso_kg": null,
+    "alergias": [],
+    "propietario_id": "usr-900493ed",
+    "historial": [],
+    "vacunas": []
+  },
+  {
+    "id": "mas-e965c731",
+    "nombre": "winnie",
+    "especie": "Gato",
+    "raza": "",
+    "edad_anios": null,
+    "peso_kg": null,
+    "alergias": [],
+    "propietario_id": "usr-32255cc4",
+    "historial": [],
+    "vacunas": []
   }
 ]

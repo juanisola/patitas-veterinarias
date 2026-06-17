@@ -70,5 +70,41 @@
     "servicio": "le duele la pata",
     "estado": "confirmado",
     "notas": ""
+  },
+  {
+    "id": "tur-5e978eae",
+    "cliente_id": "usr-7ffdce1d",
+    "mascota_id": "mas-ca24d8ee",
+    "veterinario_id": "usr-001",
+    "fecha": "2026-06-18",
+    "hora_inicio": "09:00",
+    "hora_fin": "09:30",
+    "servicio": "se rompio la pata",
+    "estado": "confirmado",
+    "notas": ""
+  },
+  {
+    "id": "tur-f23c228d",
+    "cliente_id": "usr-900493ed",
+    "mascota_id": "mas-770da715",
+    "veterinario_id": "usr-001",
+    "fecha": "2026-06-18",
+    "hora_inicio": "09:00",
+    "hora_fin": "09:30",
+    "servicio": "se resfrio",
+    "estado": "confirmado",
+    "notas": ""
+  },
+  {
+    "id": "tur-f8315453",
+    "cliente_id": "usr-32255cc4",
+    "mascota_id": "mas-e965c731",
+    "veterinario_id": "usr-001",
+    "fecha": "2026-06-18",
+    "hora_inicio": "09:00",
+    "hora_fin": "09:30",
+    "servicio": "se resfrio",
+    "estado": "confirmado",
+    "notas": ""
   }
 ]

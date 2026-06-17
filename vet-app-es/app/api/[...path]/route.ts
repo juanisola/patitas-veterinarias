@@ -6,13 +6,16 @@
  * seguridad. Al usar un Route Handler controlamos exactamente qué headers se
  * reenvían, garantizando que HTTP Basic Auth llegue intacto al backend.
  *
- * Ruta: /api/[...path] → http://localhost:3000/[...path]
+ * Ruta: /api/[...path] → http://localhost:3001/[...path]
+ *
+ * CAMBIO: Puerto actualizado de 3000 → 3001 (puerto real del backend uvicorn).
+ * Configurable vía variable de entorno NEXT_PUBLIC_BACKEND_URL.
  */
 
 import { NextRequest, NextResponse } from "next/server";
 
 const BACKEND_URL =
-  process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3000";
+  process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
 
 // Headers que NO se deben reenviar al backend
 const SKIP_HEADERS = new Set([
@@ -59,11 +62,19 @@ async function proxyRequest(
       redirect: "manual",
     });
 
-    // Construir headers de respuesta (eliminar headers problemáticos)
+    // Construir headers de respuesta.
+    // IMPORTANTE: eliminamos content-encoding porque Next.js ya decomprimir
+    // el body al llamar arrayBuffer(). Si reenviamos "content-encoding: gzip"
+    // el browser intenta descomprimir un cuerpo que ya está plano →
+    // Safari lanza "cannot decode raw data" y Chrome da error de decompresión.
     const responseHeaders = new Headers();
     backendResponse.headers.forEach((value, key) => {
       const lower = key.toLowerCase();
-      if (lower !== "transfer-encoding" && lower !== "connection") {
+      if (
+        lower !== "transfer-encoding" &&
+        lower !== "connection" &&
+        lower !== "content-encoding"   // ← fix bug Safari
+      ) {
         responseHeaders.set(key, value);
       }
     });

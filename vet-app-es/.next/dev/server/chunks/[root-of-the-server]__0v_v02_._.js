@@ -64,10 +64,13 @@ __turbopack_context__.s([
  * seguridad. Al usar un Route Handler controlamos exactamente qué headers se
  * reenvían, garantizando que HTTP Basic Auth llegue intacto al backend.
  *
- * Ruta: /api/[...path] → http://localhost:3000/[...path]
+ * Ruta: /api/[...path] → http://localhost:3001/[...path]
+ *
+ * CAMBIO: Puerto actualizado de 3000 → 3001 (puerto real del backend uvicorn).
+ * Configurable vía variable de entorno NEXT_PUBLIC_BACKEND_URL.
  */ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/server.js [app-route] (ecmascript)");
 ;
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3000";
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
 // Headers que NO se deben reenviar al backend
 const SKIP_HEADERS = new Set([
     "host",
@@ -108,11 +111,16 @@ async function proxyRequest(request, params) {
             // No seguir redirects automáticamente — los reenviamos al cliente
             redirect: "manual"
         });
-        // Construir headers de respuesta (eliminar headers problemáticos)
+        // Construir headers de respuesta.
+        // IMPORTANTE: eliminamos content-encoding porque Next.js ya decomprimir
+        // el body al llamar arrayBuffer(). Si reenviamos "content-encoding: gzip"
+        // el browser intenta descomprimir un cuerpo que ya está plano →
+        // Safari lanza "cannot decode raw data" y Chrome da error de decompresión.
         const responseHeaders = new Headers();
         backendResponse.headers.forEach((value, key)=>{
             const lower = key.toLowerCase();
-            if (lower !== "transfer-encoding" && lower !== "connection") {
+            if (lower !== "transfer-encoding" && lower !== "connection" && lower !== "content-encoding" // ← fix bug Safari
+            ) {
                 responseHeaders.set(key, value);
             }
         });

@@ -152,8 +152,38 @@ export function AdminDashboard() {
     backendMascotas.filter((m) => m.propietario_id === propietarioId);
 
   // ── Navegación de fechas ────────────────────────────────────────
+  /*
+  ===========================================
+  BUG_ID: RF-C01-20260521-004
+  ESTADO: INTENCIONAL
+  DESCRIPCION:
+  La agenda solo permite navegar hacia dias anteriores.
+  Al presionar el boton "siguiente dia" (ChevronRight),
+  la fecha no avanza: si la fecha seleccionada es hoy o
+  posterior, el boton no tiene efecto. La agenda queda
+  bloqueada en el pasado y no puede visualizar turnos futuros.
+  NO CORREGIR.
+  ===========================================
+
+  CODIGO ORIGINAL (navegacion bidireccional — deshabilitada intencionalmente):
   const navigateDate = (direction: "prev" | "next") => {
     const current = new Date(selectedDate + "T00:00:00");
+    current.setDate(current.getDate() + (direction === "next" ? 1 : -1));
+    setSelectedDate(format(current, "yyyy-MM-dd"));
+  };
+  */
+  const navigateDate = (direction: "prev" | "next") => {
+    const current = new Date(selectedDate + "T00:00:00");
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // BUG RF-C01: la condicion bloquea la navegacion hacia el futuro.
+    // Si la direccion es "next" y la fecha actual ya es hoy o posterior,
+    // la funcion retorna sin actualizar el estado — la fecha nunca avanza.
+    if (direction === "next" && current >= today) {
+      return; // bloqueo intencional de fechas futuras
+    }
+
     current.setDate(current.getDate() + (direction === "next" ? 1 : -1));
     setSelectedDate(format(current, "yyyy-MM-dd"));
   };

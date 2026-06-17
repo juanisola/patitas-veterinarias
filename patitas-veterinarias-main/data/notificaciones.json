@@ -78,5 +78,45 @@
     "enviado_en": "2026-06-11T17:04:09.678732",
     "programado_para": "2026-06-11T09:00:00",
     "estado": "simulado"
+  },
+  {
+    "id": "not-c5d4ad6b",
+    "tipo": "confirmacion",
+    "turno_id": "tur-5e978eae",
+    "destinatario": "iara1@gmail.com",
+    "mensaje": "Su turno con Dr. Martín López el 2026-06-18 a las 09:00 fue confirmado.",
+    "enviado_en": "2026-06-17T14:29:07.366594",
+    "programado_para": null,
+    "estado": "simulado"
+  },
+  {
+    "id": "not-b472f77d",
+    "tipo": "recordatorio",
+    "turno_id": "tur-5e978eae",
+    "destinatario": "iara1@gmail.com",
+    "mensaje": "Recordatorio: mañana tiene turno a las 09:00 con Dr. Martín López.",
+    "enviado_en": "2026-06-17T14:29:07.375880",
+    "programado_para": "2026-06-17T09:00:00",
+    "estado": "simulado"
+  },
+  {
+    "id": "not-bed1f7e3",
+    "tipo": "confirmacion",
+    "turno_id": "tur-f23c228d",
+    "destinatario": "iara2@gmail.com",
+    "mensaje": "Su turno con Dr. Martín López el 2026-06-18 a las 09:00 fue confirmado.",
+    "enviado_en": "2026-06-17T14:57:44.698953",
+    "programado_para": null,
+    "estado": "simulado"
+  },
+  {
+    "id": "not-46d7ab06",
+    "tipo": "confirmacion",
+    "turno_id": "tur-f8315453",
+    "destinatario": "juanti@gmail.com",
+    "mensaje": "Su turno con Dr. Martín López el 2026-06-18 a las 09:00 fue confirmado.",
+    "enviado_en": "2026-06-17T14:59:12.965812",
+    "programado_para": null,
+    "estado": "simulado"
   }
 ]
