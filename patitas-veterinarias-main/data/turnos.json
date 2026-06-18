@@ -106,5 +106,113 @@
     "servicio": "se resfrio",
     "estado": "confirmado",
     "notas": ""
+  },
+  {
+    "id": "tur-05b82182",
+    "cliente_id": "usr-0d6519a7",
+    "mascota_id": "mas-b8515232",
+    "veterinario_id": "usr-001",
+    "fecha": "2026-06-19",
+    "hora_inicio": "09:30",
+    "hora_fin": "10:00",
+    "servicio": "se cayo",
+    "estado": "confirmado",
+    "notas": ""
+  },
+  {
+    "id": "tur-de40467d",
+    "cliente_id": "usr-6acf6d32",
+    "mascota_id": "mas-1d9dafba",
+    "veterinario_id": "usr-001",
+    "fecha": "2026-06-18",
+    "hora_inicio": "09:30",
+    "hora_fin": "10:00",
+    "servicio": "se cayo",
+    "estado": "confirmado",
+    "notas": ""
+  },
+  {
+    "id": "tur-060fb291",
+    "cliente_id": "usr-a97c6d8e",
+    "mascota_id": "mas-1d4037a3",
+    "veterinario_id": "usr-001",
+    "fecha": "2026-06-18",
+    "hora_inicio": "09:00",
+    "hora_fin": "09:30",
+    "servicio": "chequeo general",
+    "estado": "confirmado",
+    "notas": ""
+  },
+  {
+    "id": "tur-7aded892",
+    "cliente_id": "usr-f38bcabd",
+    "mascota_id": "mas-a2749b06",
+    "veterinario_id": "usr-001",
+    "fecha": "2026-06-19",
+    "hora_inicio": "09:00",
+    "hora_fin": "09:30",
+    "servicio": "Control general",
+    "estado": "confirmado",
+    "notas": ""
+  },
+  {
+    "id": "tur-0380551f",
+    "cliente_id": "usr-7db8b335",
+    "mascota_id": "mas-5cac06a6",
+    "veterinario_id": "usr-001",
+    "fecha": "2026-06-19",
+    "hora_inicio": "09:00",
+    "hora_fin": "09:30",
+    "servicio": "Control general",
+    "estado": "confirmado",
+    "notas": ""
+  },
+  {
+    "id": "tur-dd05659a",
+    "cliente_id": "usr-351138ed",
+    "mascota_id": "mas-e2e806a7",
+    "veterinario_id": "usr-002",
+    "fecha": "2026-06-19",
+    "hora_inicio": "09:00",
+    "hora_fin": "09:30",
+    "servicio": "test",
+    "estado": "confirmado",
+    "notas": ""
+  },
+  {
+    "id": "tur-d060b450",
+    "cliente_id": "usr-02585b50",
+    "mascota_id": "mas-e065b4e4",
+    "veterinario_id": "usr-002",
+    "fecha": "2026-06-20",
+    "hora_inicio": "09:00",
+    "hora_fin": "09:30",
+    "servicio": "chequeo general",
+    "estado": "confirmado",
+    "notas": ""
+  },
+  {
+    "id": "tur-186a3ef5",
+    "cliente_id": "usr-004",
+    "mascota_id": "mas-001",
+    "veterinario_id": "usr-001",
+    "fecha": "2026-06-20",
+    "hora_inicio": "10:00",
+    "hora_fin": "10:30",
+    "servicio": "Consulta general",
+    "estado": "confirmado",
+    "notas": ""
+  },
+  {
+    "id": "tur-33746013",
+    "cliente_id": "usr-004",
+    "mascota_id": "mas-001",
+    "veterinario_id": "usr-001",
+    "fecha": "2026-06-20",
+    "hora_inicio": "10:00",
+    "hora_fin": "10:30",
+    "servicio": "Consulta general",
+    "estado": "confirmado",
+    "notas": ""
   }
 ]

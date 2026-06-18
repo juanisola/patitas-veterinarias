@@ -118,5 +118,95 @@
     "enviado_en": "2026-06-17T14:59:12.965812",
     "programado_para": null,
     "estado": "simulado"
+  },
+  {
+    "id": "not-38282363",
+    "tipo": "confirmacion",
+    "turno_id": "tur-05b82182",
+    "destinatario": "ju@gmail.com",
+    "mensaje": "Su turno con Dr. Martín López el 2026-06-19 a las 09:30 fue confirmado.",
+    "enviado_en": "2026-06-17T23:15:01.436335",
+    "programado_para": null,
+    "estado": "simulado"
+  },
+  {
+    "id": "not-6952b7cc",
+    "tipo": "confirmacion",
+    "turno_id": "tur-de40467d",
+    "destinatario": "ju12@gmail.com",
+    "mensaje": "Su turno con Dr. Martín López el 2026-06-18 a las 09:30 fue confirmado.",
+    "enviado_en": "2026-06-17T23:18:08.455540",
+    "programado_para": null,
+    "estado": "simulado"
+  },
+  {
+    "id": "not-985160ff",
+    "tipo": "confirmacion",
+    "turno_id": "tur-060fb291",
+    "destinatario": "firulais@gmail.com",
+    "mensaje": "Su turno con Dr. Martín López el 2026-06-18 a las 09:00 fue confirmado.",
+    "enviado_en": "2026-06-17T23:53:41.396680",
+    "programado_para": null,
+    "estado": "simulado"
+  },
+  {
+    "id": "not-c284d141",
+    "tipo": "confirmacion",
+    "turno_id": "tur-7aded892",
+    "destinatario": "juan@test.com",
+    "mensaje": "Su turno con Dr. Martín López el 2026-06-19 a las 09:00 fue confirmado.",
+    "enviado_en": "2026-06-18T00:05:23.530446",
+    "programado_para": null,
+    "estado": "simulado"
+  },
+  {
+    "id": "not-581b33da",
+    "tipo": "confirmacion",
+    "turno_id": "tur-0380551f",
+    "destinatario": "juan1@test.com",
+    "mensaje": "Su turno con Dr. Martín López el 2026-06-19 a las 09:00 fue confirmado.",
+    "enviado_en": "2026-06-18T00:14:57.372579",
+    "programado_para": null,
+    "estado": "simulado"
+  },
+  {
+    "id": "not-b6c15c0a",
+    "tipo": "confirmacion",
+    "turno_id": "tur-dd05659a",
+    "destinatario": "testereuge@gmail.com",
+    "mensaje": "Su turno con Dra. Sofía Ramos el 2026-06-19 a las 09:00 fue confirmado.",
+    "enviado_en": "2026-06-18T01:21:31.385652",
+    "programado_para": null,
+    "estado": "simulado"
+  },
+  {
+    "id": "not-a01e8ece",
+    "tipo": "confirmacion",
+    "turno_id": "tur-d060b450",
+    "destinatario": "jddjsj@gmail.com",
+    "mensaje": "Su turno con Dra. Sofía Ramos el 2026-06-20 a las 09:00 fue confirmado.",
+    "enviado_en": "2026-06-18T01:21:33.992932",
+    "programado_para": null,
+    "estado": "simulado"
+  },
+  {
+    "id": "not-2d517b47",
+    "tipo": "confirmacion",
+    "turno_id": "tur-186a3ef5",
+    "destinatario": "carlos.gomez@gmail.com",
+    "mensaje": "Su turno con Dr. Martín López el 2026-06-20 a las 10:00 fue confirmado.",
+    "enviado_en": "2026-06-18T02:54:46.514210",
+    "programado_para": null,
+    "estado": "simulado"
+  },
+  {
+    "id": "not-4f3da122",
+    "tipo": "confirmacion",
+    "turno_id": "tur-33746013",
+    "destinatario": "carlos.gomez@gmail.com",
+    "mensaje": "Su turno con Dr. Martín López el 2026-06-20 a las 10:00 fue confirmado.",
+    "enviado_en": "2026-06-18T02:55:50.336572",
+    "programado_para": null,
+    "estado": "simulado"
   }
 ]

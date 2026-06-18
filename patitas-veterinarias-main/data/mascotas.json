@@ -152,5 +152,89 @@
     "propietario_id": "usr-32255cc4",
     "historial": [],
     "vacunas": []
+  },
+  {
+    "id": "mas-b8515232",
+    "nombre": "chim",
+    "especie": "Perro",
+    "raza": "",
+    "edad_anios": null,
+    "peso_kg": null,
+    "alergias": [],
+    "propietario_id": "usr-0d6519a7",
+    "historial": [],
+    "vacunas": []
+  },
+  {
+    "id": "mas-1d9dafba",
+    "nombre": "chinchin",
+    "especie": "Perro",
+    "raza": "",
+    "edad_anios": null,
+    "peso_kg": null,
+    "alergias": [],
+    "propietario_id": "usr-6acf6d32",
+    "historial": [],
+    "vacunas": []
+  },
+  {
+    "id": "mas-1d4037a3",
+    "nombre": "john",
+    "especie": "Ave",
+    "raza": "",
+    "edad_anios": null,
+    "peso_kg": null,
+    "alergias": [],
+    "propietario_id": "usr-a97c6d8e",
+    "historial": [],
+    "vacunas": []
+  },
+  {
+    "id": "mas-a2749b06",
+    "nombre": "Firulais",
+    "especie": "Perro",
+    "raza": "",
+    "edad_anios": null,
+    "peso_kg": null,
+    "alergias": [],
+    "propietario_id": "usr-f38bcabd",
+    "historial": [],
+    "vacunas": []
+  },
+  {
+    "id": "mas-5cac06a6",
+    "nombre": "Firulais",
+    "especie": "Perro",
+    "raza": "",
+    "edad_anios": null,
+    "peso_kg": null,
+    "alergias": [],
+    "propietario_id": "usr-7db8b335",
+    "historial": [],
+    "vacunas": []
+  },
+  {
+    "id": "mas-e2e806a7",
+    "nombre": "test",
+    "especie": "Otro",
+    "raza": "",
+    "edad_anios": null,
+    "peso_kg": null,
+    "alergias": [],
+    "propietario_id": "usr-351138ed",
+    "historial": [],
+    "vacunas": []
+  },
+  {
+    "id": "mas-e065b4e4",
+    "nombre": "juan",
+    "especie": "Gato",
+    "raza": "",
+    "edad_anios": null,
+    "peso_kg": null,
+    "alergias": [],
+    "propietario_id": "usr-02585b50",
+    "historial": [],
+    "vacunas": []
   }
 ]

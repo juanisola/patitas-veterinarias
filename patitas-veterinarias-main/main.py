@@ -13,6 +13,7 @@
 import json
 import logging
 import os
+import re
 import uuid
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -28,6 +29,30 @@ from pydantic import BaseModel
 # ─────────────────────────────────────────────
 # LOGGING
 # ─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# CR-AU-002 — VALIDACIÓN DE NOMBRE DE USUARIO
+# ─────────────────────────────────────────────
+# Regla de negocio:
+#   - Solo letras (a-z, A-Z), tildes (á é í ó ú Á É Í Ó Ú ü Ü), ñ/Ñ y espacios simples.
+#   - No se permiten dígitos, símbolos, puntos, emojis ni caracteres especiales.
+#   - No se permiten espacios múltiples consecutivos.
+#   - Se permite guion medio (-) y apóstrofe (') porque son parte de nombres
+#     compuestos válidos: Jean-Paul, O'Brien, d'Artagnan.
+#     Si en el futuro se decide prohibirlos, eliminar \-' del patrón.
+# Aplicado en: POST /auth/register
+#
+# Patrón: una o más "palabras" separadas por un único espacio.
+# Cada palabra es una secuencia de letras (incl. tildes, ñ), guion o apóstrofe.
+# Unicode escapes para evitar conflictos de comillas en el intérprete:
+#   \u00e1-\u00fa  = á é í ó ú    \u00c1-\u00da = Á É Í Ó Ú
+#   \u00fc\u00dc  = ü Ü            \u00f1\u00d1 = ñ Ñ
+NOMBRE_RE = re.compile(
+    r"^[A-Za-z\u00e1\u00e9\u00ed\u00f3\u00fa\u00c1\u00c9\u00cd\u00d3\u00da\u00fc\u00dc\u00f1\u00d1'\-]+"
+    r"(?: [A-Za-z\u00e1\u00e9\u00ed\u00f3\u00fa\u00c1\u00c9\u00cd\u00d3\u00da\u00fc\u00dc\u00f1\u00d1'\-]+)*$"
+)
+# Garantiza: mínimo 1 carácter, sin espacios iniciales/finales (gracias a strip previo),
+# sin espacios dobles consecutivos, sin dígitos ni símbolos.
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s — %(message)s",
@@ -425,6 +450,28 @@ def register(body: RegistroUsuarioRequest):
     """
     usuarios = load_usuarios()
 
+    # ── CR-AU-002: Validación estricta de nombre ──────────────────────
+    nombre_normalizado = body.nombre.strip()
+    if not nombre_normalizado:
+        logger.warning("Registro fallido — nombre vacío o solo espacios")
+        raise HTTPException(
+            status_code=422,
+            detail="Nombre inválido. El campo nombre es obligatorio.",
+        )
+    if not NOMBRE_RE.match(nombre_normalizado):
+        logger.warning(
+            "Registro fallido — nombre con caracteres no permitidos: %r",
+            body.nombre,
+        )
+        raise HTTPException(
+            status_code=422,
+            detail=(
+                "Nombre inválido. Solo se permiten letras, tildes, ñ y espacios simples. "
+                "No se admiten números, símbolos, puntos ni caracteres especiales."
+            ),
+        )
+    # ─────────────────────────────────────────────────────────────────
+
     # Validación laxa intencional — solo verifica presencia de "@"
     if "@" not in body.email:
         raise HTTPException(status_code=400, detail="Email inválido")
@@ -435,7 +482,7 @@ def register(body: RegistroUsuarioRequest):
 
     nuevo = {
         "id": f"usr-{uuid.uuid4().hex[:8]}",
-        "nombre": body.nombre,
+        "nombre": nombre_normalizado,  # CR-AU-002: se guarda ya sin espacios extremos
         "email": body.email,
         "password": body.password,
         "rol": "cliente",

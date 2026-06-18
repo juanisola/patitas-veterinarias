@@ -118,5 +118,69 @@
     "password": "123456",
     "rol": "cliente",
     "activo": true
+  },
+  {
+    "id": "usr-0d6519a7",
+    "nombre": "juan perez",
+    "email": "ju@gmail.com",
+    "password": "123456",
+    "rol": "cliente",
+    "activo": true
+  },
+  {
+    "id": "usr-6acf6d32",
+    "nombre": "juan",
+    "email": "ju12@gmail.com",
+    "password": "123456",
+    "rol": "cliente",
+    "activo": true
+  },
+  {
+    "id": "usr-a97c6d8e",
+    "nombre": "firulais",
+    "email": "firulais@gmail.com",
+    "password": "123456",
+    "rol": "cliente",
+    "activo": true
+  },
+  {
+    "id": "usr-f38bcabd",
+    "nombre": "Juan Perez",
+    "email": "juan@test.com",
+    "password": "123456",
+    "rol": "cliente",
+    "activo": true
+  },
+  {
+    "id": "usr-7db8b335",
+    "nombre": "Juan Perez",
+    "email": "juan1@test.com",
+    "password": "123456",
+    "rol": "cliente",
+    "activo": true
+  },
+  {
+    "id": "usr-351138ed",
+    "nombre": "tester euge",
+    "email": "testereuge@gmail.com",
+    "password": "test123",
+    "rol": "cliente",
+    "activo": true
+  },
+  {
+    "id": "usr-02585b50",
+    "nombre": "juani",
+    "email": "jddjsj@gmail.com",
+    "password": "123456",
+    "rol": "cliente",
+    "activo": true
+  },
+  {
+    "id": "usr-a36b789e",
+    "nombre": "Juan",
+    "email": "juan45@test.com",
+    "password": "123456",
+    "rol": "cliente",
+    "activo": true
   }
 ]

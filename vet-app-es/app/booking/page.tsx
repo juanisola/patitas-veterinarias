@@ -37,6 +37,18 @@ import {
 
 type Species = "dog" | "cat" | "bird" | "other";
 
+/*
+ * CR-AU-002 — Validación client-side de nombre
+ * Misma regla que el backend (NOMBRE_RE en main.py):
+ *   - Letras, tildes, ñ/Ñ, guion y apóstrofe.
+ *   - Palabras separadas por un único espacio.
+ *   - Sin números, símbolos, emojis ni caracteres especiales.
+ * Permite O'Brien, Jean-Paul, María José, etc.
+ * Esta validación es informativa: el backend es la fuente de verdad.
+ */
+const NOMBRE_RE_CLIENT =
+  /^[A-Za-z\u00e1\u00e9\u00ed\u00f3\u00fa\u00c1\u00c9\u00cd\u00d3\u00da\u00fc\u00dc\u00f1\u00d1'\-]+(?:\s[A-Za-z\u00e1\u00e9\u00ed\u00f3\u00fa\u00c1\u00c9\u00cd\u00d3\u00da\u00fc\u00dc\u00f1\u00d1'\-]+)*$/;
+
 export default function BookingPage() {
   const router = useRouter();
   const [step, setStep] = useState(1);
@@ -69,6 +81,16 @@ export default function BookingPage() {
   const handleSubmit = async () => {
     setIsSubmitting(true);
     setSubmitError("");
+
+    // CR-AU-002: validación client-side de nombre antes de llamar al backend
+    const nombreTrimmed = ownerName.trim();
+    if (!nombreTrimmed || !NOMBRE_RE_CLIENT.test(nombreTrimmed)) {
+      setSubmitError(
+        "Nombre inválido. Solo se permiten letras, tildes, ñ y espacios simples."
+      );
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       // 1. Registrar usuario cliente en el backend
@@ -352,7 +374,15 @@ export default function BookingPage() {
                         value={ownerName}
                         onChange={(e) => setOwnerName(e.target.value)}
                         placeholder="Tu nombre completo"
+                        aria-describedby="ownerName-hint"
                       />
+                      {/* CR-AU-002: hint inline de formato aceptado */}
+                      <p
+                        id="ownerName-hint"
+                        className="text-xs text-muted-foreground"
+                      >
+                        Solo letras, tildes y ñ. Sin números ni símbolos.
+                      </p>
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="ownerPhone">Teléfono</Label>
