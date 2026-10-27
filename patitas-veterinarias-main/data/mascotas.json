@@ -1,7 +1,7 @@
 [
   {
     "id": "mas-001",
-    "nombre": "Firulais",
+    "nombre": "Rocco",
     "especie": "Perro",
     "raza": "Labrador",
     "edad_anios": 3,
@@ -35,7 +35,7 @@
   },
   {
     "id": "mas-002",
-    "nombre": "Michi",
+    "nombre": "Luna",
     "especie": "Gato",
     "raza": "Siamés",
     "edad_anios": 5,
@@ -61,180 +61,45 @@
     ]
   },
   {
-    "id": "mas-8e414fac",
-    "nombre": "firulaisss",
+    "id": "mas-003",
+    "nombre": "Paco",
     "especie": "Ave",
-    "raza": "canario",
-    "edad_anios": null,
-    "peso_kg": null,
+    "raza": "Loro Amazónico",
+    "edad_anios": 2,
+    "peso_kg": 0.4,
     "alergias": [],
-    "propietario_id": "usr-1e3de19f",
-    "historial": [],
-    "vacunas": []
-  },
-  {
-    "id": "mas-94b813e1",
-    "nombre": "mish",
-    "especie": "Gato",
-    "raza": "naranja",
-    "edad_anios": null,
-    "peso_kg": null,
-    "alergias": [],
-    "propietario_id": "usr-dad99bd6",
-    "historial": [],
-    "vacunas": []
-  },
-  {
-    "id": "mas-c89a9c6d",
-    "nombre": "violeta",
-    "especie": "Perro",
-    "raza": "",
-    "edad_anios": null,
-    "peso_kg": null,
-    "alergias": [],
-    "propietario_id": "usr-8d38d573",
+    "propietario_id": "usr-004",
     "historial": [
       {
-        "fecha": "2026-06-11",
+        "fecha": "2025-03-05",
         "tipo": "consulta",
-        "diagnostico": "Dolor de pata",
-        "tratamiento": "Ponerle una venda",
-        "veterinario_id": "usr-003",
-        "notas_internas": "Se accidento jugando"
+        "diagnostico": "Control de plumaje y pico",
+        "tratamiento": "Suplemento vitamínico 30 días",
+        "veterinario_id": "usr-001",
+        "notas_internas": "Ave activa, sin signos de enfermedad."
       }
     ],
     "vacunas": []
   },
   {
-    "id": "mas-ca24d8ee",
-    "nombre": "carlos",
-    "especie": "Gato",
-    "raza": "",
-    "edad_anios": null,
-    "peso_kg": null,
-    "alergias": [],
-    "propietario_id": "usr-7ffdce1d",
-    "historial": [],
-    "vacunas": []
-  },
-  {
-    "id": "mas-a731b416",
-    "nombre": "Wendy",
-    "especie": "Perro",
-    "raza": "",
-    "edad_anios": null,
-    "peso_kg": null,
-    "alergias": [],
-    "propietario_id": "usr-e26c6d73",
-    "historial": [],
-    "vacunas": []
-  },
-  {
-    "id": "mas-770da715",
-    "nombre": "pupii",
-    "especie": "Gato",
-    "raza": "",
-    "edad_anios": null,
-    "peso_kg": null,
-    "alergias": [],
-    "propietario_id": "usr-900493ed",
-    "historial": [],
-    "vacunas": []
-  },
-  {
-    "id": "mas-e965c731",
-    "nombre": "winnie",
-    "especie": "Gato",
-    "raza": "",
-    "edad_anios": null,
-    "peso_kg": null,
-    "alergias": [],
-    "propietario_id": "usr-32255cc4",
-    "historial": [],
-    "vacunas": []
-  },
-  {
-    "id": "mas-b8515232",
-    "nombre": "chim",
-    "especie": "Perro",
-    "raza": "",
-    "edad_anios": null,
-    "peso_kg": null,
-    "alergias": [],
-    "propietario_id": "usr-0d6519a7",
-    "historial": [],
-    "vacunas": []
-  },
-  {
-    "id": "mas-1d9dafba",
-    "nombre": "chinchin",
-    "especie": "Perro",
-    "raza": "",
-    "edad_anios": null,
-    "peso_kg": null,
-    "alergias": [],
-    "propietario_id": "usr-6acf6d32",
-    "historial": [],
-    "vacunas": []
-  },
-  {
-    "id": "mas-1d4037a3",
-    "nombre": "john",
-    "especie": "Ave",
-    "raza": "",
-    "edad_anios": null,
-    "peso_kg": null,
-    "alergias": [],
-    "propietario_id": "usr-a97c6d8e",
-    "historial": [],
-    "vacunas": []
-  },
-  {
-    "id": "mas-a2749b06",
-    "nombre": "Firulais",
-    "especie": "Perro",
-    "raza": "",
-    "edad_anios": null,
-    "peso_kg": null,
-    "alergias": [],
-    "propietario_id": "usr-f38bcabd",
-    "historial": [],
-    "vacunas": []
-  },
-  {
-    "id": "mas-5cac06a6",
-    "nombre": "Firulais",
-    "especie": "Perro",
-    "raza": "",
-    "edad_anios": null,
-    "peso_kg": null,
-    "alergias": [],
-    "propietario_id": "usr-7db8b335",
-    "historial": [],
-    "vacunas": []
-  },
-  {
-    "id": "mas-e2e806a7",
-    "nombre": "test",
+    "id": "mas-004",
+    "nombre": "Chispitas",
     "especie": "Otro",
-    "raza": "",
-    "edad_anios": null,
-    "peso_kg": null,
+    "raza": "Hámster Sirio",
+    "edad_anios": 1,
+    "peso_kg": 0.12,
     "alergias": [],
-    "propietario_id": "usr-351138ed",
-    "historial": [],
-    "vacunas": []
-  },
-  {
-    "id": "mas-e065b4e4",
-    "nombre": "juan",
-    "especie": "Gato",
-    "raza": "",
-    "edad_anios": null,
-    "peso_kg": null,
-    "alergias": [],
-    "propietario_id": "usr-02585b50",
-    "historial": [],
+    "propietario_id": "usr-005",
+    "historial": [
+      {
+        "fecha": "2025-04-18",
+        "tipo": "consulta",
+        "diagnostico": "Revisión general de roedor",
+        "tratamiento": "Sin tratamiento requerido",
+        "veterinario_id": "usr-002",
+        "notas_internas": "Ejemplar saludable."
+      }
+    ],
     "vacunas": []
   }
 ]
